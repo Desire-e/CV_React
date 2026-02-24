@@ -1,0 +1,35 @@
+/* importa css de variables globales */
+@import "./variables.css";
+
+/* importa css de sobreescrituras de estilos bootstrap */
+@import "./overrides-bootstrap.css";
+
+/* importa css de mis propios componentes usados en App.jsx */
+@import "./app-components.css";
+
+/* importa css de los /pages */
+@import "./pages.css";
+
+/* importa css de mis propios componentes usados dentro de cada /page */
+@import "./components.css";
+
+
+
+/* Reset */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    color:#1F2937;
+    background: linear-gradient(90deg,var(--primary-color), var(--accent-color));
+}
+
+h1 { font-size: 3.5em; }
+
+ul {
+  list-style: none; /* Elimina las viñetas */
+  padding: 0;       /* Elimina el espaciado izquierdo */
+  margin: 0;        /* Elimina márgenes superiores/inferiores */
+}
+

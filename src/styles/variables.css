@@ -1,0 +1,30 @@
+/* variables globales para todos los CSS */
+
+:root {
+    /* modo claro */
+    --bg-color:#F9FAFB;
+    --txt-primary-color:#1F2937;
+    --txt-secondary-color:#4B5563;
+    --primary-color:#1E3A8A;
+    --accent-color:#F97316;
+    --accent-color-2: #c66621;
+    --border-color:#1E293B;
+
+    /* morados-naranjado: */
+    /* background-color:#7c5257; */
+    /* background-color: #91574d; */
+    
+    /* morado oscuro: */
+    /* background-color: #403247; */
+
+
+    /* modo oscuro */
+    --dark-bg-color:#0F172A;
+    --dark-txt-primary-color:#F1F5F9;
+    --dark-txt-secondary-color:#94A3B8;
+    --dark-primary-color:#3B82F6;
+    --dark-accent-color:#FB923C;
+    --dark-border-color:#1E293B;
+}
+
+/* ejemplo de uso: body { background-color: var(--bg-color); } */

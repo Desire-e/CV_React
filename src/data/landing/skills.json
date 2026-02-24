@@ -1,0 +1,33 @@
+[
+  {
+    "id":1,
+    "icon": "bi bi-front",
+    "title": "Frontend",
+    "items": ["HTML / CSS", "JavaScript", "React", "Bootstrap", "Responsive Design"]
+  },
+  {
+    "id":2,
+    "icon": "bi bi-filetype-java",
+    "title": "Backend",
+    "items": ["Java", "Servlets (Jakarta EE)", "PHP", "Laravel", "MySQL"]
+  },
+  {
+    "id":3,
+    "icon": "bi bi-server",
+    "title": "Despliegue y sistemas",
+    "items": ["Apache", "Tomcat", "FTP", "LDAP", "DNS", "Instancias EC2 AWS"]
+  },
+  {
+    "id":4,
+    "icon": "bi bi-gear",
+    "title": "Entornos y herramientas",
+    "items": ["Git / GitHub", "Docker", "npm", "Vite", "XAMPP", "MySQL Workbench", "Google Analytics"]
+  },
+  {
+    "id":5,
+    "icon": "bi bi-diagram-3",
+    "title": "Conceptos y Arquitectura",
+    "items": ["JSON", "Arquitectura MVC", "Arquitectura cliente-servidor", "Programación orientada a objetos",
+            "Autenticación y autorización","Control de versiones"]
+  }
+]

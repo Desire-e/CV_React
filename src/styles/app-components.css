@@ -1,0 +1,95 @@
+/* Estilos de mis propios componentes usados en App.jsx */
+
+/* Header.jsx */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 6rem 2rem;
+  
+  background: linear-gradient(90deg,var(--primary-color), var(--accent-color));
+  color: white;
+}
+header h1 {
+  padding-bottom: 2rem;
+  margin:0;
+}
+
+hr{
+  background-color: white;
+  color:white;
+  width: 80%;
+  border: 1px solid white;
+  height: 2px;
+}
+
+@media (max-width: 768px) {
+  header { 
+    padding: 3rem 1.5rem;
+  }
+
+  header h1 { font-size: 2rem; }
+  header h2 { font-size: 1.2rem; }
+  header h5 { font-size: 1rem; }
+}
+
+
+/* NavBar.jsx -- en src/styles/overrides-bootstrap.css */
+
+
+/* Footer.jsx */
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  gap:2em;
+
+  color:#fff;
+  
+  /* margin: 2em 8vw; */
+  padding: 2rem 1.5rem;
+  margin: 0;
+}
+
+footer p, footer ul {font-size: 0.9em;}
+
+.footer-container{
+  display: flex;
+  gap: 4em;
+  flex-wrap: wrap;
+}
+
+.footer-item{
+  display: flex;
+  gap:1em;
+}
+
+.separator{
+  border-left: 2px solid white; 
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    align-items: center;
+    gap: 2em;
+  }
+
+  .footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    margin-bottom: 1em;
+  }
+
+  .separator {
+    display: none;
+  }
+}

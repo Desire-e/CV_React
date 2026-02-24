@@ -1,0 +1,254 @@
+/* Estilos de mis componentes propios dentro de los /pages */
+
+
+/* -------------------------------------------------------- */
+
+/* LANDINGPAGE */
+
+/* About.jsx */
+.about-image {
+  width: 130px;
+  height: auto;
+
+  float: right;       /* 👈 hace que el texto la envuelva */
+  margin: 0 0 1rem 2rem; /* espacio entre texto e imagen */
+}
+
+.about-container {
+  overflow: hidden;   /* 👈 evita problemas de colapso */
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+/* los demás en override-bootstrap */
+
+/* -------------------------------------------------------- */
+
+/* PORTFOLIOPAGE */
+
+/* ProjectCard usado por ProjectsCarousel */
+.project-card {
+    /* width: auto; */
+    width: 100%;
+    height: 33em;
+
+    background-color: var(--border-color);
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .project-card { height: 45em;}
+}
+
+
+
+.project-image a img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.3em;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #ffffffa8;
+  margin-bottom: 12px;
+}
+
+.project-tags {  margin-bottom: 12px; }
+.project-tags .tag {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+
+/* ViewProjectButton.jsx */
+
+.view-project-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--accent-color-2);
+  color: white;
+  text-decoration: none;   /* quita subrayado */
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.view-project-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.view-project-btn:active {
+  transform: translateY(0);
+}
+
+/* -------------------------------------------------------- */
+
+/* EXPERIENCEPAGE */
+/* Experiences.jsx */
+.bg-primary-item { background-color: var(--border-color); }
+
+
+/* Collaborations.jsx */
+.bg-secondary-item { background-color: #403247; }
+
+
+/* Card.jsx usado por Experiences y Collaborations */
+.card-item {
+    width: 90%;
+    /* height: 13em; */
+    padding: 1.5em;
+
+    display: flex;
+    align-items: center;
+    /* align-content: center; */
+    gap:2em;
+
+    text-align: left;
+
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+}
+
+.card-image img{
+    width: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.card-content{
+    height: 100%;
+    max-width: 70%;
+    color:#fff;
+}
+
+.card-tags{ margin-top: 1em;}
+.card-tags .tag{
+    color:#fff;
+
+    display: inline-block;
+
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    margin-right: 6px;
+}
+
+.card-link a {
+    color:#fff;
+    text-decoration: none;
+
+    display: inline-block; /* para que aplique transform */
+    transition: color 0.3s ease, transform 0.5s ease; /* Aplica la transición a la propiedad de color */
+}
+.card-link a:hover {
+    color: var(--accent-color-2);
+    transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+
+  .card-item {
+    width: 100%;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    gap: 1.2em;
+  }
+
+  .card-image img {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .card-content {
+    max-width: 100%;
+  }
+
+  .card-link {
+    align-self: flex-end;
+  }
+
+}
+
+
+
+/* FormationDropdown.jsx usado por Formations */
+.formation-item{ 
+    width: 90%;
+    padding: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    border: 1px solid var(--dark-txt-secondary-color);
+}
+@media (max-width: 768px) {
+  .formation-item {
+    width: 100%;
+  }
+}
+
+.formation-header{ /* parte siempre visible */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.formation-header button{ /* quita estilos del btn del desplegable */
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    /* color: inherit; Hereda el color del texto contenedor */
+    /* font: inherit; Hereda la fuente del contenedor */
+    outline: none; /* Elimina el borde al hacer click (accesibilidad) */
+}
+.formation-header button{ transition: transform 0.5s ease; }   /* botón desplegable se gira */
+.formation-header button.active { transform: rotate(-90deg); }
+
+
+.formation-knowns{  /* parte desplegada */ /* inactiva,  no se muestra */
+    overflow: hidden;
+
+    max-height: 0; /* sin altura */
+    opacity: 0;     /* sin opacidad */
+    transform: translateY(-10px);   /* queda 10px arriba */
+
+    transition: 
+    max-height 0.5s ease,
+    opacity 0.3s ease,
+    transform 0.5s ease;
+}
+.formation-knowns.active{ /* activa, se muestra */
+    max-height: 30em; /* establece máximo suficiente para el contenido */
+    opacity: 1;     /* establece opacidad */
+    transform: translateY(0); /* se baja */
+}
