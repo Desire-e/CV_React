@@ -3,7 +3,7 @@
         "id": 1, 
         "title": "Web responsive",
         "description": "Web de una librería, responsive y accesible",
-        "image": "/src/assets/images/ejemplo.png",
+        "image": "ejemplo.png",
         "link": "https://github.com/desire-e/",
         "tags":  ["HTML", "CSS", "Figma", "JavaScript"]
     }, 
@@ -11,7 +11,7 @@
         "id": 2,
         "title": "Aplicación de matriculación",
         "description": "Aplicación de matriculación, con un sistema de almacenamiento a elegir entre base de datos o ficheros, y una vista  a elegir entre gráfica o consola",
-        "image": "/src/assets/images/ejemplo.png",
+        "image": "ejemplo.png",
         "link": "https://github.com/desire-e/",
         "tags":  ["MySQL", "SceneBuilder", "Java", "MVC", "Patrón Singleton", "Almacenamiento en ficheros y BD"]
     },
@@ -19,7 +19,7 @@
         "id": 3, 
         "title": "Web responsive",
         "description": "Web de una librería, responsive y accesible",
-        "image": "/src/assets/images/ejemplo.png",
+        "image": "ejemplo.png",
         "link": "https://github.com/desire-e/",
         "tags":  ["HTML", "CSS", "Figma", "JavaScript"]
     } 

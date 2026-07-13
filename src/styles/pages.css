@@ -8,8 +8,8 @@
     gap: clamp(3rem, 6vw, 6rem);
 
     width: 100%;
-    max-width: 1200px;
-    margin: 4rem auto;
+    /* max-width: 1200px; */
+    /* margin: 4rem auto; */
     padding: clamp(2rem, 5vw, 6rem); /* padding del 5% del width de la pantalla, máximo 6 rootem, mínimo 2 */
     /* clamp(mínimo, preferido, máximo) 
     Mínimo -- El valor más pequeño permitido.

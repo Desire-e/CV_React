@@ -1,47 +1,292 @@
-/* Estilos de mis propios componentes usados en App.jsx */
+/* ------------------------------------- */
+/* Estilos generales y componentes reutilizables */
+/* ------------------------------------- */
 
-/* Header.jsx */
-header {
+
+/* ===================== 
+   Utilidades generales.
+   Buttons.
+===================== */
+
+.btn-cta {
+  padding: 1rem 3rem;
+  
+  font-style: normal;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  color:white;
+  background: linear-gradient(120deg,   rgb(128, 63, 14) 30%, var(--accent-color-2) 100%);
+  
+  border: 1px transparent solid;
+  border-radius: 0.5rem;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.btn-cta:hover {  transform: scale(1.02); }
+
+
+.button-scroll {
+  font-style: normal;
+  text-decoration: none;
+  font-size: 2rem;
+  color:white;
+  background: none;
+  border: none;
+  
+  width: 100%;
+  text-align: center;
+  opacity:0.7;
+ 
+  /* Timing function: cómo se distribuye la velocidad a lo largo de la animación
+   ease-in-out Empieza lento, acelera en el medio, termina lento
+   linear Velocidad constante
+   ease Empieza rápido, termina lento (default de CSS)
+   ... */
+  animation: upDownAnimation 3s ease-in-out infinite;
+}
+
+@keyframes upDownAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+
+/* overrides bootstrap */
+
+.btn {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.6rem;
+  --bs-border-width: 1.5px;
+}
+
+.btn-lg {
+  --bs-btn-font-size: 1.1rem;
+
+  --bs-btn-padding-x: 2.4rem;
+  --bs-btn-padding-y: 1rem;
+
+  --bs-btn-color: white;
+  --bs-btn-border-color: var(--accent-color-2);
+  
+  --bs-btn-hover-bg: var(--accent-color-2);
+  --bs-btn-hover-border-color: var(--accent-color-2);
+  
+  --bs-btn-active-bg: var(--accent-color-2);
+  --bs-btn-active-border-color: var(--accent-color-2);
+}
+
+
+
+/* ------------------------------------- */
+/* Estilos de mis componentes en App.jsx */
+/* ------------------------------------- */
+
+/* ===================== 
+   Hero.jsx
+   Contiene Header, XIntro
+===================== */
+
+.hero-container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  height: 100vh;
+
+  background: url(/images/background.png);
+  background-position: 5%;
+  background-repeat: no-repeat;
+
+  padding: 1.2rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+@media(max-width:768px){
+  .hero-container{
+    background-position: 60% 100%;
+    padding: 2rem;
+    align-items: center; 
+  }
+}
+
+
+/* ===================== 
+   Header.jsx 
+   Contiene Navtab, logo
+===================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
 
-  padding: 6rem 2rem;
-  
-  background: linear-gradient(90deg,var(--primary-color), var(--accent-color));
   color: white;
-}
-header h1 {
-  padding-bottom: 2rem;
-  margin:0;
+  background:transparent;
+
+  margin: 0 3rem;
+  width: auto;
 }
 
-hr{
-  background-color: white;
-  color:white;
-  width: 80%;
-  border: 1px solid white;
-  height: 2px;
+#btn-hamburger {
+  display:none;
+  font-size: 2rem;
 }
 
 @media (max-width: 768px) {
+  #btn-hamburger{
+    display:block;
+  }
+  
   header { 
-    padding: 3rem 1.5rem;
+    margin: 0;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
-  header h1 { font-size: 2rem; }
-  header h2 { font-size: 1.2rem; }
-  header h5 { font-size: 1rem; }
+  /* header img {order: 1;}  */
+
+  /* header .btn.btn-outline-light { order: 2; } */
+  header .btn.btn-outline-light { display: none; }
+
+  /* .navtab-container { order: 3; } */
+  .navtab-container, .navtab-container *  { display: none; }
+}
+
+/* ===================== 
+   Navtab.jsx 
+===================== */
+
+/* overrides bootstrap */
+
+.nav {
+  --bs-nav-underline-link-active-color:var(--accent-color);
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: var(--accent-color);
+  
+  --bs-nav-link-font-size: 1rem;
+  --bs-nav-link-padding-y: 0.7rem;
+}
+
+.nav-underline .nav-link.active, 
+.nav-underline .show>.nav-link {
+  font-weight: normal;
+}
+
+.nav-underline { --bs-nav-underline-gap: 3.5rem; }
+
+@media (max-width: 768px) {
+  .nav-underline { --bs-nav-underline-gap: 1.5rem !important; }
 }
 
 
-/* NavBar.jsx -- en src/styles/overrides-bootstrap.css */
+/* ===================== 
+   XIntro.jsx 
+   Intro de cada página
+===================== */
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 0.8rem;
+
+  color: white;
+  
+  margin: 0 10rem;
+  margin-top: 4rem;
+  
+  width: auto;
+  height: 100%;
+}
+
+.intro-container .content h1 { 
+  font-size: 3.5rem;   
+}
+
+.intro-container .content p#greetings { 
+  font-size: 1.4rem; 
+  margin: 0;
+}
+.intro-container .content p#role { font-size: 2rem; }
+
+@media(max-width:768px){
+  .intro-container {
+    margin: 0;
+  }
+
+  .intro-container .content h1 {
+    font-size: 2.5rem;
+  }
+  .intro-container .content p#greetings {
+    font-size: 1.2rem;
+  }
+  .intro-container .content p#role {
+    font-size: 1.7rem;
+  }
+
+}
 
 
-/* Footer.jsx */
-footer{
+/* LandingIntro */
+.landing.intro-container .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+@media(max-width:768px){
+  .landing.intro-container .buttons {
+    margin:1.5rem 0;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .landing.intro-container .buttons a, 
+  .landing.intro-container .buttons button {
+    padding: 0.7rem 1.5rem; 
+    width: 100%;
+  }
+}
+
+/* Variante de btn-cta en LandingIntro - #my-projects-btn */
+.landing.intro-container .btn-cta i { margin-left: 0.6rem; }
+
+@media(max-width:768px){
+  .landing.intro-container .btn-cta i { margin-left: 0.3rem; }
+}
+
+.landing.intro-container .btn-cta i {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.landing.intro-container .btn-cta:hover i {
+  transform: translateX(40%);  
+}
+
+
+/* TODO. */
+
+/* PortfolioIntro */
+
+/* ExperienceIntro */
+
+
+
+
+/* ===================== 
+   Footer.jsx 
+===================== */
+
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,6 +300,10 @@ footer{
   /* margin: 2em 8vw; */
   padding: 2rem 1.5rem;
   margin: 0;
+
+  background: #10163A;
+  background: linear-gradient(150deg,rgba(16, 22, 58, 1) 45%, rgba(80, 44, 52, 1) 71%, rgba(198, 100, 50, 1) 100%);
+  /* background-position: 5%; */
 }
 
 footer p, footer ul {font-size: 0.9em;}
@@ -93,3 +342,5 @@ footer p, footer ul {font-size: 0.9em;}
     display: none;
   }
 }
+
+

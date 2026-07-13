@@ -1,11 +1,20 @@
+
+import Navtab from "./Navtab";
+import Button from 'react-bootstrap/Button';
+
+
 function Header() {
   return (
     <header>
-      <h1>Desirée Rueda Torres</h1>
-      <h2>Desarrolladora Web Junior</h2>
-      <h5>En formación, flexible, pero enfocada en desarrollo backend</h5>
-      <hr />
-      <p>Inserta un slogan llamativo</p>
+      <img src={`${import.meta.env.BASE_URL}images/logotipo.png`} 
+      className="" alt="Logotipo" width={"170px"}/>
+      
+      <Navtab />
+
+      <Button variant="outline-light">Contacto</Button>
+
+      <i id="btn-hamburger" className="bi bi-list"></i>
+
     </header>
   );
 }

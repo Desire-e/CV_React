@@ -10,7 +10,7 @@ Sirve como enrutador: asocia URLs con paginas
 
 
 // sistema de navegación
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // estilos
 import 'bootstrap/dist/css/bootstrap.min.css'; // estilos generales bootstrap
@@ -19,8 +19,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // iconos bootstrap
 
 
 // componentes base
+import Hero from "./components/app/Hero"
+
 import Header from "./components/app/Header";
-import NavBar from "./components/app/NavBar";
+
+import LandingIntro from "./components/app/hero-intros/LandingIntro"
+import PortfolioIntro from "./components/app/hero-intros/PortfolioIntro"
+import ExperienceIntro from "./components/app/hero-intros/ExperienceIntro";
+
 import Footer from "./components/app/Footer";
 
 // paginas
@@ -31,17 +37,39 @@ import ExperiencePage from "./pages/ExperiencePage";
 
 function App() {
   return (
-   <Router>
-      <NavBar />
-      <Header />
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+
+  // useLocation(): hook que lee el contexto de React Router. 
+  // Ese contexto solo existe dentro del árbol que envuelve <Router>. 
+  const location = useLocation();
+
+  return (
+   <>
+      <Hero>
+        {/* Header + Navtab */}
+        <Header />
+
+        {location.pathname === "/" && <LandingIntro />}
+        {location.pathname === "/portfolio" && <PortfolioIntro />}
+        {location.pathname === "/experience" && <ExperienceIntro />}
+      </Hero>
+
+      <div id="contents"></div>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
+      
       <Footer />
-    </Router>
+    </>
   );
 }
 

@@ -7,15 +7,15 @@ que contiene. Los props son la información / estado pasada por el componente co
 // - los props son los parametros que recibe la funcion
 // - con los props, rellena los campos
 
-
 // cards individuales de cada proyecto contenido en el carousel del portfolio
 function ProjectCard({ title, description, image, link, tags }) {
+
     return (
         <div className="project-card">
         
             <div className="project-image"> 
                 <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <img src={image} alt={title} />
+                    <img src={`${import.meta.env.BASE_URL}images/${image}`} alt={title}/>
                 </a>
             </div>
 

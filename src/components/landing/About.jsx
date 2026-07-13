@@ -1,9 +1,9 @@
-import foto from '../../images/foto.jpeg';
+// import foto from '../../public/images/foto.jpeg';
 
 function About () {
     return (
         <div className="about-container">
-            <img src={foto} alt="Foto profesional" className="about-image"/>
+            <img src={`${import.meta.env.BASE_URL}images/foto.jpeg`} className="about-image" alt="Foto profesional"/>
 
             <p>
                 Soy una desarrolladora de aplicaciones web junior en su penúltimo año de Formación Profesional de Grado 

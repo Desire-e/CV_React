@@ -2,11 +2,19 @@
 /* es un card individual */
 
 function CardWide({id, title, description, image, link, tags, colorClass}) {
+    // const basePathImg = "/CV_React/src/assets/images/";
+
     return (
         <>
             <div className={`card-item ${colorClass}`} key={id}>
                 <div className='card-image'>
-                    <img src={image}/>
+                    <img src={`${import.meta.env.BASE_URL}images/${image}`} alt={title}/>
+                    {/* import.meta.env.BASE_URL
+                    variable que contiene exactamente el base que pusiste en vite.config.js 
+                    
+                    Todo lo que está dentro de la carpeta public/ ya se copia a la raíz de dist/
+                    GitHub Pages sirve esos archivos desde el base que definí
+                    */}
                 </div>
                 
                 <div className='card-content'>

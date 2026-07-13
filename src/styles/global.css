@@ -1,6 +1,3 @@
-/* importa css de variables globales */
-@import "./variables.css";
-
 /* importa css de sobreescrituras de estilos bootstrap */
 @import "./overrides-bootstrap.css";
 
@@ -17,15 +14,17 @@
 
 /* Reset */
 
-*, *::before, *::after { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    color:#1F2937;
-    background: linear-gradient(90deg,var(--primary-color), var(--accent-color));
+*, 
+*::before, 
+*::after { 
+  box-sizing: border-box; 
+  margin:0; 
+  padding: 0;
 }
 
-h1 { font-size: 3.5em; }
+body {
+  color:var(--txt-primary-color);
+}
 
 ul {
   list-style: none; /* Elimina las viñetas */
@@ -33,3 +32,40 @@ ul {
   margin: 0;        /* Elimina márgenes superiores/inferiores */
 }
 
+hr{
+  background-color: white;
+  color:white;
+  width: 80%;
+  border: 1px solid white;
+  height: 2px;
+}
+
+
+/* Variables globales */
+
+:root {
+  /* modo claro */
+  --bg-color:#F9FAFB;
+  --txt-primary-color:#1F2937;
+  --txt-secondary-color:#4B5563;
+  --primary-color:#1E3A8A;
+  --accent-color: rgb(240, 129, 29);
+  --accent-color-2:  rgb(199, 101, 26);
+  --border-color:#1E293B;
+
+  /* morados-naranjado: */
+  /* background-color:#7c5257; */
+  /* background-color: #91574d; */
+  
+  /* morado oscuro: */
+  /* background-color: #403247; */
+
+
+  /* modo oscuro */
+  --dark-bg-color:#0F172A;
+  --dark-txt-primary-color:#F1F5F9;
+  --dark-txt-secondary-color:#94A3B8;
+  --dark-primary-color:#3B82F6;
+  --dark-accent-color:#FB923C;
+  --dark-border-color:#1E293B;
+}
