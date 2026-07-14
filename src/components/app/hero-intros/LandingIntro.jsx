@@ -2,11 +2,14 @@ import Button from 'react-bootstrap/Button';
 import ButtonCta from '../../reusables/ButtonCta';
 import ButtonScroll from '../../reusables/ButtonScroll';
 
-// function LandingIntro() {
+import DustParticlesAnimation from '../DustParticlesAnimation';
+
 function HeroLanding() {
     return (
     
         <div className="landing intro-container">
+    
+            <DustParticlesAnimation />
 
             <div className='content'>
                 <p id="greetings" style={{color:"var(--accent-color)"}}>¡Buenas! Soy</p>
