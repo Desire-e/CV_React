@@ -1,8 +1,5 @@
-/* importa css de sobreescrituras de estilos bootstrap */
-@import "./overrides-bootstrap.css";
-
-/* importa css de mis propios componentes usados en App.jsx */
-@import "./app-components.css";
+/* CSS componentes base usados en App.jsx */
+@import "./base.css";
 
 /* importa css de los /pages */
 @import "./pages.css";

@@ -1,5 +1,5 @@
 /* ------------------------------------- */
-/* Estilos generales y componentes reutilizables */
+/* Estilos componentes reutilizables */
 /* ------------------------------------- */
 
 
@@ -82,6 +82,28 @@
   --bs-btn-active-border-color: var(--accent-color-2);
 }
 
+.card{ width: min(20rem, 100%); }
+.card-text { color: var(--txt-primary-color); }
+.card-body{ justify-items: center; color: var(--accent-color-2); }
+@media (max-width: 768px) { .h5 { font-size: 1.2em; } }
+
+
+/* ContactBtn.jsx -- LandingPage */
+.btn-primary {
+    --bs-btn-bg: var(--txt-secondary-color);
+    --bs-btn-border-color: var(--txt-secondary-color);
+    --bs-btn-hover-bg: var(--border-color);
+    --bs-btn-hover-border-color: var(--border-color);
+    --bs-btn-active-bg: var(--border-color);
+    --bs-btn-active-border-color: var(--border-color);
+    --bs-btn-disabled-bg: var(--txt-secondary-color);
+    --bs-btn-disabled-border-color: var(--txt-secondary-color);
+
+    max-width: min-content;
+    width: min(200px, 100%);
+}
+
+
 
 
 /* ------------------------------------- */
@@ -111,7 +133,7 @@
   .hero-container{
     background-position: 60% 100%;
     padding: 2rem;
-    align-items: center; 
+    /* align-items: center;  */
   }
 }
 
@@ -120,6 +142,8 @@
    Header.jsx 
    Contiene Navtab, logo
 ===================== */
+
+/* TODO. Hamburguer menu MOBILE */
 
 header {
   display: flex;
@@ -174,7 +198,7 @@ header {
 }
 
 .nav-underline .nav-link.active, 
-.nav-underline .show>.nav-link {
+.nav-underline .show > .nav-link {
   font-weight: normal;
 }
 
@@ -215,9 +239,15 @@ header {
 }
 .intro-container .content p#role { font-size: 2rem; }
 
+@media(max-width:425px){
+  .intro-container {
+    margin: 0 !important;
+  }
+}
+
 @media(max-width:768px){
   .intro-container {
-    margin: 0;
+    margin: 0 5rem;
   }
 
   .intro-container .content h1 {
@@ -229,7 +259,6 @@ header {
   .intro-container .content p#role {
     font-size: 1.7rem;
   }
-
 }
 
 
@@ -242,7 +271,7 @@ header {
   text-align: center;
 }
 
-@media(max-width:768px){
+@media(max-width:425px){
   .landing.intro-container .buttons {
     margin:1.5rem 0;
     width: 100%;
@@ -289,58 +318,112 @@ header {
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
+  flex-wrap: wrap;
+
   align-items: center;
-  gap:2em;
+  align-content: space-evenly;
+    
+  /* margin: 0; */
 
-  color:#fff;
-  
-  /* margin: 2em 8vw; */
-  padding: 2rem 1.5rem;
-  margin: 0;
-
+  color: #fff;
   background: #10163A;
   background: linear-gradient(150deg,rgba(16, 22, 58, 1) 45%, rgba(80, 44, 52, 1) 71%, rgba(198, 100, 50, 1) 100%);
-  /* background-position: 5%; */
 }
 
-footer p, footer ul {font-size: 0.9em;}
+@media(max-width:768px) {
+  footer {
+    
+  } 
+}
 
-.footer-container{
+/* footer p, footer ul { font-size: 0.9em; } */
+
+footer h5 { color: var(--accent-color); }
+
+.footer-top {
   display: flex;
-  gap: 4em;
   flex-wrap: wrap;
+
+  padding: 5rem 2rem;
+
+  width: 100%;
+  justify-content: space-between;
 }
 
-.footer-item{
-  display: flex;
-  gap:1em;
+@media(max-width:768px) {
+  .footer-top {
+    padding: 2rem;
+    
+    width: auto;
+    justify-content: left;
+    gap: 3.5rem;
+  }
 }
+@media(max-width:425px) {
+  .footer-top {
+    flex-direction: column;    
+    gap: 1.5rem;
+  }
+}
+
+.footer-top .footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+@media(max-width:768px) {
+  .footer-top .footer-item {
+    padding: 0;
+    gap: 2rem;
+    word-break: break-all;
+  }
+}
+
+
+.footer-top .footer-item:first-child  {
+  width: min-content;
+}
+
+.footer-top .footer-item ul li i {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color:#fff;
+}
+
+.footer-item .profiles a {
+  font-size: 1.5rem;
+  margin-right: 1.7rem;
+  color:#fff;
+}
+.footer-item .profiles .logotipo { margin-bottom: 1rem; }
+
 
 .separator{
-  border-left: 2px solid white; 
+  border-left: 1.5px solid rgba(255, 255, 255, 0.345); 
   height: auto;
 }
-
 @media (max-width: 768px) {
-  .footer-container {
-    align-items: center;
-    gap: 2em;
-  }
-
-  .footer-item{
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-
-    margin-bottom: 1em;
-  }
-
   .separator {
     display: none;
   }
 }
 
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: #0000004b;  
+  width:100%;
+  margin: 0;
+  padding: 1.3rem;
+
+  justify-content: center;
+  align-items: center; 
+}
+
+.footer-bottom p { margin: 0; }
 
