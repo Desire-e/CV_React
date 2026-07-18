@@ -1,48 +1,82 @@
 /* Estilos base de los /pages */
 
-.containerPage{
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    gap: clamp(3rem, 6vw, 6rem);
+.container-page{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--bg-color);  
+  
+  width: 100%;
+  padding: clamp(7rem, 10vw, 10rem); 
+  /* gap: clamp(3rem, 6vw, 6rem); */
+  gap: clamp(7rem, 11vw, 11rem);
 
-    width: 100%;
-    /* max-width: 1200px; */
-    /* margin: 4rem auto; */
-    padding: clamp(2rem, 5vw, 6rem); /* padding del 5% del width de la pantalla, máximo 6 rootem, mínimo 2 */
-    /* clamp(mínimo, preferido, máximo) 
+  /* clamp(mínimo, preferido, máximo) 
     Mínimo -- El valor más pequeño permitido.
     Preferido -- El valor que se aplicará normalmente, a menudo una unidad relativa como % o vw.
-    Máximo -- El valor más grande permitido
-    */
-    
-    background-color: var(--bg-color); 
+    Máximo -- El valor más grande permitido */  
 }
 
-.section{
-    display: flex;
-    flex-direction: column;
-    gap:1.3em;
+.section, 
+section{
+  display: flex;
+  flex-direction: column;
+  gap:1.3em;
+  
 }
-.section h2 {
+
+.section h2, 
+.container-page section h2{
   font-size: clamp(1.5rem, 4vw, 2.2rem);
-  text-align: center;
+  /* text-align: center; */
+  /* padding-bottom: 20px; */
+
+  text-align: left;
+  margin-bottom: 2rem;
+  padding-bottom: 20px;
+
+  position: relative;
+  width:fit-content;
 }
-.section p {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
-  line-height: 1.6;
+/* border bajo el título */
+.container-page section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%; /* ajusta length */
+  height: 2.3px;
+  background-color: var(--accent-color); /* color del border */
 }
 
-.section.aligned{
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
+
+/* .container.about-me { */
+.contenido {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+.section.aligned, 
+section.aligned{
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .subsection {
     display: flex;
-    flex-wrap: wrap; /* Obliga a saltar de línea, los hijos no se encogen */
+    flex-wrap: wrap; /* obliga a saltar de línea, los hijos no se encogen */
     justify-content: center;
 
     flex-direction: column;
@@ -60,3 +94,7 @@
     align-items: center; 
     gap:0; 
 }
+
+
+
+

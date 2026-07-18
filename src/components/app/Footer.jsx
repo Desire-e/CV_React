@@ -19,17 +19,17 @@ function Footer() {
                     {/* TODO. RESPONSIVE */}
                     <ul>
                         <h5>Contacto</h5>
-                        <li> <i class="bi bi-envelope"></i> desireeruedatorresalmeria@gmail.com </li>
-                        <li> <i class="bi bi-telephone"></i> +34 605726030 </li>
+                        <li> <i className="bi bi-envelope"></i> desireeruedatorresalmeria@gmail.com </li>
+                        <li> <i className="bi bi-telephone"></i> +34 605726030 </li>
                     </ul>
 
                     {/* TODO. RESPONSIVE */}
                     <div className="profiles">
                         <h5>Perfiles</h5>
 
-                        <a href=""><i class="bi bi-github"></i></a>
+                        <a href=""><i className="bi bi-github"></i></a>
                         
-                        <a href=""><i class="bi bi-linkedin"></i></a>
+                        <a href=""><i className="bi bi-linkedin"></i></a>
                         
                         <a href="">
                             <img src={`${import.meta.env.BASE_URL}images/europass-logo.png`} 

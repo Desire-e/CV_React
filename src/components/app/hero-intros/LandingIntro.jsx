@@ -25,7 +25,7 @@ function HeroLanding() {
                 <div className='buttons'>
                     <ButtonCta route="#" id="my-projects-btn">
                         Mis proyectos
-                        <i class="bi bi-arrow-right-short"></i>
+                        <i className="bi bi-arrow-right-short"></i>
                     </ButtonCta>
 
                     <Button variant="outline-primary" id="about-me-btn" href="#contents" size="lg">Sobre mí</Button>

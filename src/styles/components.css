@@ -1,32 +1,123 @@
 /* Estilos de mis componentes propios dentro de los /pages */
 
 
-/* -------------------------------------------------------- */
 
+/* ------------------- */
 /* LANDINGPAGE */
+/* ------------------- */
 
-/* About.jsx */
-.about-image {
-  width: 130px;
-  height: auto;
+/* ================
+   About.jsx 
+================ */
 
-  float: right;       /* 👈 hace que el texto la envuelva */
-  margin: 0 0 1rem 2rem; /* espacio entre texto e imagen */
+.contenido.about-me {
+  gap: 3rem;
 }
 
-.about-container {
-  overflow: hidden;   /* 👈 evita problemas de colapso */
+.letter {
+  flex: 1 0 40vw;
 }
 
-@media (max-width: 768px) {
-  .about-image {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem auto;
-  }
+.contenido.about-me .image {
+  max-width: 270px;
+  float: right;   
 }
 
-/* los demás en override-bootstrap */
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* ================
+   Skills.jsx 
+================ */
+
+.contenido.skills {
+  flex-direction: column;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  height: fit-content;
+  /* height: 180px; */
+}
+
+.category .title {
+  display: flex;
+  /* background: rgb(240, 129, 29);
+  background: radial-gradient(circle,
+    rgba(240, 129, 29, 0.3) 5%, 
+    rgba(240, 129, 29, 0.1) 25%, 
+    rgba(240, 129, 29, 0) 40%); */
+
+  /* rgba(106, 52, 40) */
+  /* rgba(66, 36, 47) */
+  /* rgba(40, 26, 51) */
+
+  align-items: center;
+  padding: 1rem;
+  width: 110px;
+  height: stretch;
+  /* establece la altura para que coincida 
+  con la altura de su bloque contenedor
+  ignora padding, solo calcula espacio disponible */
+}
+
+.category .title h3 { 
+  font-size:1.4rem;
+}
+
+.technologies {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.technology {
+  display: flex;
+  
+  text-align: center;
+  justify-content: left;
+  align-items: center;
+  
+  gap: 1rem;
+  
+  /* height: stretch; */
+  height: 70px;
+  width: 170px;
+  
+  padding: 0.5rem;
+  border: var(--border-color) 1.5px solid;
+  border-radius: 3px;
+  background: var(--border-color);
+}
+
+.technology h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.technology .icon {
+  width: 40px;
+  max-width: 40px;
+}
+.technology .icon img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
 
 /* -------------------------------------------------------- */
 

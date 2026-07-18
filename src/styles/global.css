@@ -21,6 +21,7 @@
 
 body {
   color:var(--txt-primary-color);
+  background-color: var(--bg-color);
 }
 
 ul {
@@ -42,13 +43,20 @@ hr{
 
 :root {
   /* modo claro */
-  --bg-color:#F9FAFB;
-  --txt-primary-color:#1F2937;
+  /* --bg-color:#F9FAFB; */
+  --bg-color:#0C1236;
+
+  /* --txt-primary-color:#1F2937; */
+  --txt-primary-color:#fff;
   --txt-secondary-color:#4B5563;
+  
   --primary-color:#1E3A8A;
+  
   --accent-color: rgb(240, 129, 29);
   --accent-color-2:  rgb(199, 101, 26);
-  --border-color:#1E293B;
+  
+  /* --border-color:#1E293B; */
+  --border-color:#182050;
 
   /* morados-naranjado: */
   /* background-color:#7c5257; */

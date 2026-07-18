@@ -1,33 +1,43 @@
 // componentes de React Bootstrap
 
 
-import CardSkills from '../components/landing/CardSkills';
+import Skills from '../components/landing/Skills';
 import ContactButtons from '../components/landing/ContactButtons';
 import About from '../components/landing/About';
 
 function LandingPage () {
     return(
-        <div className="containerPage">
-            <div className="section">
-                <h2>Sobre mí</h2>
+        // TODO. Animación abajo-arriba, con opacity 0 - 1 ; para cada section
+        // TODO. Animacion de carga al entrar
+
+
+        // <div className="containerPage">
+        <div className="container-page">
+            {/* <div className="section"> */}
+            <section>
                 <About />
-            </div>
+            </section>
 
 
-            <div className="section">
-                <h2>Habilidades</h2>
-                <div className="subsection row">
-                    <CardSkills />
-                </div>
-            </div>
+            <section>
+                {/* <h2>Habilidades</h2> */}
+                
+                {/* <div className="subsection row"> */}
+                    <Skills />
+                {/* </div> */}
+            </section>
 
-            <div className="section aligned">
+
+            {/* <section className="aligned">
+
                 <h2>Buscando crecimiento profesional</h2>
+                
                 <p>Si quieres alguien comprometido y responsable, determinado a crecer en el sector...</p>
+                
                 <div className="subsection row">
                     <ContactButtons />
                 </div>
-            </div>     
+            </section>      */}
 
         </div>
     );

@@ -66,12 +66,7 @@
   --bs-border-width: 1.5px;
 }
 
-.btn-lg {
-  --bs-btn-font-size: 1.1rem;
-
-  --bs-btn-padding-x: 2.4rem;
-  --bs-btn-padding-y: 1rem;
-
+.btn-lg, .btn-md, .btn-sm{
   --bs-btn-color: white;
   --bs-btn-border-color: var(--accent-color-2);
   
@@ -81,11 +76,17 @@
   --bs-btn-active-bg: var(--accent-color-2);
   --bs-btn-active-border-color: var(--accent-color-2);
 }
+.btn-lg {
+  --bs-btn-font-size: 1.1rem;
 
-.card{ width: min(20rem, 100%); }
+  --bs-btn-padding-x: 2.4rem;
+  --bs-btn-padding-y: 1rem;
+}
+
+/* .card{ width: min(20rem, 100%); }
 .card-text { color: var(--txt-primary-color); }
 .card-body{ justify-items: center; color: var(--accent-color-2); }
-@media (max-width: 768px) { .h5 { font-size: 1.2em; } }
+@media (max-width: 768px) { .h5 { font-size: 1.2em; } } */
 
 
 /* ContactBtn.jsx -- LandingPage */
@@ -287,7 +288,7 @@ header {
 }
 .intro-container .content p#role { font-size: 2rem; }
 
-@media(max-width:425px){
+@media(max-width:426px){
   .intro-container {
     margin: 0 !important;
   }
@@ -319,7 +320,7 @@ header {
   text-align: center;
 }
 
-@media(max-width:425px){
+@media(max-width:426px){
   .landing.intro-container .buttons {
     margin:1.5rem 0;
     width: 100%;
@@ -407,7 +408,7 @@ footer h5 { color: var(--accent-color); }
     gap: 3.5rem;
   }
 }
-@media(max-width:425px) {
+@media(max-width:426px) {
   .footer-top {
     flex-direction: column;    
     gap: 1.5rem;

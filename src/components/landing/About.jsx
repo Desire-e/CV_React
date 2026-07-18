@@ -1,23 +1,38 @@
 // import foto from '../../public/images/foto.jpeg';
+import Button from 'react-bootstrap/Button';
 
 function About () {
     return (
-        <div className="about-container">
-            <img src={`${import.meta.env.BASE_URL}images/foto.jpeg`} className="about-image" alt="Foto profesional"/>
+        // <div className="about-container">
+        <div className="contenido about-me">
 
-            <p>
-                Soy una desarrolladora de aplicaciones web junior en su penúltimo año de Formación Profesional de Grado 
-                Superior en Desarrollo de Aplicaciones Web. Cuento con una sólida base Frontend y Backend para comenzar.
-            </p>
-            <p>
-                ¿Qué me diferencia? mi capacidad de aprendizaje, trabajo en equipo y orientación a la mejora continua, 
-                tratando de ir más allá de un código meramente funcional, sino que además aporte soluciones óptimas, 
-                mantenibles y escalables.
-            </p>
-            <p>
-                Busco mi primera oportunidad profesional para aplicar mis conocimientos técnicos, seguir creciendo 
-                y aportar valor en proyectos web.
-            </p>
+            <div className="letter">
+                <h2>Sobre mí</h2>
+
+                <p>
+                    Soy desarrolladora de aplicaciones web junior, actualmente cursando el último año del Ciclo 
+                    Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW). He adquirido una sólida base 
+                    en tecnologías frontend y backend,
+                </p>
+                <p>
+                    Me considero una persona con gran capacidad de aprendizaje, orientada al trabajo en equipo y 
+                    comprometida con la mejora continua. Me gusta desarrollar aplicaciones que no solo funcionen 
+                    correctamente, sino que también sean mantenibles, escalables y aporten soluciones de calidad.
+                </p>
+                <p>
+                    Actualmente busco mi primera oportunidad profesional para poner en práctica mis conocimientos, 
+                    seguir creciendo como desarrolladora y contribuir con ilusión y responsabilidad a proyectos web 
+                    reales.
+                </p>
+
+                <Button variant="outline-primary" id="about-me-btn" href="#skills" size="md">Ver más</Button>
+
+            </div>
+            <div className="image">
+                <img src={`${import.meta.env.BASE_URL}images/foto.jpeg`}  
+                alt="Foto profesional" className=""/>
+            </div>
+
         </div>
     );      
 }
