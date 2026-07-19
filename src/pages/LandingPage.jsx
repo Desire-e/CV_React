@@ -11,9 +11,7 @@ function LandingPage () {
         // TODO. Animacion de carga al entrar
 
 
-        // <div className="containerPage">
         <div className="container-page">
-            {/* <div className="section"> */}
             <section>
                 <About />
             </section>
@@ -26,18 +24,6 @@ function LandingPage () {
                     <Skills />
                 {/* </div> */}
             </section>
-
-
-            {/* <section className="aligned">
-
-                <h2>Buscando crecimiento profesional</h2>
-                
-                <p>Si quieres alguien comprometido y responsable, determinado a crecer en el sector...</p>
-                
-                <div className="subsection row">
-                    <ContactButtons />
-                </div>
-            </section>      */}
 
         </div>
     );

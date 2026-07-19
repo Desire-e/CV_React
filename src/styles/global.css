@@ -44,9 +44,12 @@ hr{
 :root {
   /* modo claro */
   /* --bg-color:#F9FAFB; */
-  --bg-color:#0C1236;
 
   /* --txt-primary-color:#1F2937; */
+
+  --bg-color:#0C1236;
+  --bg-color-light: #0f1642;
+  
   --txt-primary-color:#fff;
   --txt-secondary-color:#4B5563;
   

@@ -4,28 +4,31 @@ import Formations from '../components/experience/Formations'
 
 function ExperiencePage () {
     return(
-        <div className="containerPage">
-            <div className="section">
+        <div className="container-page">
+            {/* <div className="section"> */}
+            <section>
                 <h2>Proyectos personales</h2>
                 <div className="subsection cards-column">
                     <Experiences />
                 </div>
-            </div>
+            </section>
 
-            <div className="section">
+            {/* <div className="section"> */}
+            <section>
                 <h2>Colaboraciones</h2>
                 <div className="subsection cards-column">
                     <Collaborations />
                 </div>
-            </div>
+            </section>
 
 
-            <div className="section">
+            {/* <div className="section"> */}
+            <section>
                 <h2>Formación</h2>
                 <div className="subsection dropdown">
                     <Formations />
                 </div>
-            </div>
+            </section>
 
         </div>
     );

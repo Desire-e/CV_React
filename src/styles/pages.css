@@ -4,61 +4,54 @@
   display: flex;
   flex-direction: column;
   
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   
   background-color: var(--bg-color);  
   
   width: 100%;
-  padding: clamp(7rem, 10vw, 10rem); 
-  /* gap: clamp(3rem, 6vw, 6rem); */
-  gap: clamp(7rem, 11vw, 11rem);
+  padding: clamp(2rem, 10vw, 10rem) clamp(2rem, 12vw, 12rem);
+  gap: clamp(9rem, 13vw, 13rem);
 
-  /* clamp(mínimo, preferido, máximo) 
+  /* clamp(mínimo, preferido, máximo)
     Mínimo -- El valor más pequeño permitido.
     Preferido -- El valor que se aplicará normalmente, a menudo una unidad relativa como % o vw.
-    Máximo -- El valor más grande permitido */  
+    Máximo -- El valor más grande permitido */
 }
 
-.section, 
-section{
+
+section {
   display: flex;
   flex-direction: column;
-  gap:1.3em;
-  
+  gap: 1.3em;
 }
 
-.section h2, 
 .container-page section h2{
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
-  /* text-align: center; */
-  /* padding-bottom: 20px; */
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
 
   text-align: left;
   margin-bottom: 2rem;
-  padding-bottom: 20px;
+  padding-bottom: 1rem;
 
   position: relative;
   width:fit-content;
 }
+
 /* border bajo el título */
 .container-page section h2::after {
   content: "";
   position: absolute;
+  
   left: 0;
   right: 0;
   bottom: 0;
+
   width: 40%; /* ajusta length */
   height: 2.3px;
   background-color: var(--accent-color); /* color del border */
 }
 
 
-/* .container.about-me { */
-.contenido {
-  display:flex;
-  flex-wrap: wrap;
-}
 
 
 

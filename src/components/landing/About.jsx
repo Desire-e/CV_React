@@ -3,12 +3,11 @@ import Button from 'react-bootstrap/Button';
 
 function About () {
     return (
-        // <div className="about-container">
         <div className="contenido about-me">
+            
+            <h2>Sobre mí</h2>
 
             <div className="letter">
-                <h2>Sobre mí</h2>
-
                 <p>
                     Soy desarrolladora de aplicaciones web junior, actualmente cursando el último año del Ciclo 
                     Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW). He adquirido una sólida base 
@@ -26,8 +25,8 @@ function About () {
                 </p>
 
                 <Button variant="outline-primary" id="about-me-btn" href="#skills" size="md">Ver más</Button>
-
             </div>
+
             <div className="image">
                 <img src={`${import.meta.env.BASE_URL}images/foto.jpeg`}  
                 alt="Foto profesional" className=""/>

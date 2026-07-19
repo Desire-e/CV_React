@@ -116,7 +116,7 @@
    Contiene Header, XIntro
 ===================== */
 
-.hero-container{
+.hero-container {
   display: flex;
   flex-direction: column;
 
@@ -137,7 +137,35 @@
     padding: 2rem;
   }
 }
+/* 
+    background:
 
+        /* brillo naranja 
+        radial-gradient(
+            circle at 100% 25%,
+            rgba(255,115,35,.35) 0%,
+            rgba(255,115,35,.18) 20%,
+            rgba(255,115,35,.08) 40%,
+            transparent 70%
+        ),
+
+        /* transición morada 
+        radial-gradient(
+            circle at 65% 50%,
+            rgba(90,55,140,.28) 0%,
+            rgba(70,40,110,.18) 35%,
+            transparent 65%
+        ),
+
+        /* fondo azul 
+        linear-gradient(
+            90deg,
+            #08152f 0%,
+            #0d1436 45%,
+            #1a1735 100%
+        );
+
+*/
 
 /* Animación de partículas en Hero de LandingPage */
 .dust {

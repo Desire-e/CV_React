@@ -3,12 +3,13 @@ import ProjectsCarousel from '../components/portfolio/ProjectsCarousel'
 
 function PortfolioPage () {
     return(
-        <div className="containerPage">
-            <div className="section aligned">
+        <div className="container-page">
+            {/* <div className="section aligned"> */}
+            <section>
                 <h2>Proyectos</h2>
                 <p>Proyectos realizados durante mi formación. Cada uno enfocado en practicar una habilidad concreta.</p>
                 <ProjectsCarousel />
-            </div>
+            </section>
         </div>
     );
 } 

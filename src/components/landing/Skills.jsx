@@ -10,205 +10,170 @@ function Skills() {
         Ayuda a React a actualizar solo los elementos que cambian
         Evita warnings y posibles bugs en componentes dinámicos 
         */
-       <>
+    <>
+
         <div id="skills"></div>
+
         <div className="contenido skills">
 
             <h2>Habilidades</h2>
 
-            <div className='categories'>
+            <div className="skill-section">
+                <article className="skill-info">
+                    <div className="skill-icon"><i className="bi bi-code-slash"></i></div>
+                    <h3>Frontend</h3>
+                </article>
 
-                <div className='category'>
-                    <div className='title'><h3>Frontend</h3></div>
-                    
-                    <div className='technologies'>
+                <div className="cards">
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/html-icon.png`} alt=""/>
+                        <span>HTML5</span>
+                    </div>
 
-                            <div className='technology'>
-                                <div className='icon'>
-                                    <img src={`${import.meta.env.BASE_URL}images/html-icon.png`} alt=""/>
-                                </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/css-icon.png`} alt=""/>
+                        <span>CSS3</span>
+                    </div>
 
-                                <h4>HTML5</h4>
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/js-icon.png`} alt=""/>
+                        <span>JavaScript</span>
+                    </div>
 
-                            <div className='technology'>
-                                <div className='icon'>
-                                    <img src={`${import.meta.env.BASE_URL}images/css-icon.png`} alt=""/>
-                                </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/bootstrap-5-logo-icon.png`} alt=""/>
+                        <span>Bootstrap</span>
+                    </div>
 
-                                <h4>CSS3</h4>
-                            </div>
-
-                            <div className='technology'>
-                                <div className='icon'>
-                                    <img src={`${import.meta.env.BASE_URL}images/js-icon.png`} alt=""/>
-                                </div>
-
-                                <h4>JavaScript</h4>
-                            </div>
-
-                            <div className='technology'>
-                                <div className='icon'>
-                                    <img src={`${import.meta.env.BASE_URL}images/bootstrap-5-logo-icon.png`} alt=""/>
-                                </div>
-
-                                <h4>Bootstrap 5</h4>
-                            </div>
-
-                            <div className='technology'>
-                                <div className='icon'>
-                                    <img src={`${import.meta.env.BASE_URL}images/react-js-icon.png`} alt=""/>
-                                </div>
-
-                                <h4>React</h4>
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/react-js-icon.png`} alt=""/>
+                        <span>React</span>
                     </div>
                 </div>
+            </div> 
 
 
+            <div className="skill-section">
+                <article className="skill-info">
+                    <div className="skill-icon"><i className="bi bi-braces"></i></div>
+                    <h3>Backend</h3>
+                </article>
+                
+                
+                <div className="cards">
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/php-icon.png`} alt="" />
+                        <span>PHP</span>
+                    </div>
 
-                <div className='category'>
-                    <div className='title'><h3>Backend</h3></div>
-    
-                    <div className='technologies'>
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/php-icon.png`} alt="" />
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/laravel-icon.png`} alt="" />
+                        <span>Laravel</span>
+                    </div>
 
-                            <h4>PHP</h4>
-                        </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/java-icon.png`} alt="" />
+                        <span>Java</span>
+                    </div>
 
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/laravel-icon.png`} alt="" />
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/node-js-icon.png`} alt="" />
+                        <span>Node.js</span>
+                    </div>
 
-                            <h4>Laravel</h4>
-                        </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/api-icon.png`} alt="" />
+                        <span>RESTful API</span>
+                    </div>
 
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/java-icon.png`} alt="" />
-                            </div>
-
-                            <h4>Java</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/node-js-icon.png`} alt="" />
-                            </div>
-
-                            <h4>Node.js</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/api-icon.png`} alt="" />
-                            </div>
-
-                            <h4>RESTful API</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/mysql-icon.png`} alt="" />
-                            </div>
-
-                            <h4>MySQL</h4>
-                        </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/mysql-icon.png`} alt="" />
+                        <span>MySQL</span>
                     </div>
                 </div>
+            
+            </div>
 
-                {/* TODO. Icons */}
-                <div className='category'>
-                    <div className='title'><h3>DevOps, Deploy</h3></div>
-    
+            <div className="skill-section">
+                <article className="skill-info">
+                    <div className="skill-icon"><i className="bi bi-cloud"></i></div>
+                    <h3>DevOps, Deployment</h3>
+                </article>
 
+                <div className="cards">
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/aws-icon.png`} alt="" />
+                        <span>AWS EC2</span>
+                    </div>
 
-                    <div className='technologies'>
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/aws-icon.png`} alt="" />
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/docker-icon.png`} alt="" />
+                        <span>Docker</span>
+                    </div>
 
-                            <h4>AWS EC2</h4>
-                        </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/git-icon.png`} alt="" />
+                        <span>Git, GitHub</span>
+                    </div>
 
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/docker-icon.png`} alt="" />
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/google-cloud-icon.png`} alt="" />
+                        <span>Google Cloud Console</span>
+                    </div>
 
-                            <h4>Docker</h4>
-                        </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/dns-icon.png`} alt="" />
+                        <span>DNS management</span>
+                    </div>
 
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/git-icon.png`} alt="" />
-                            </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/filezilla-icon.png`} alt="" />
+                        <span>FTP / Fillezila</span>
+                    </div>
 
-                            <h4>Git, GitHub</h4>
-                        </div>
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/apache-http-icon.png`} alt="" />
+                        <span>Apache HTTP Server</span>
+                    </div>
 
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/google-cloud-icon.png`} alt="" />
-                            </div>
-
-                            <h4>Google Cloud Console</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/`} alt="" />
-                            </div>
-
-                            <h4>DNS Management</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/`} alt="" />
-                            </div>
-
-                            <h4>FTP / FileZilla</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/`} alt="" />
-                            </div>
-
-                            <h4>Apache HTTP Server</h4>
-                        </div>
-
-                        <div className='technology'>
-                            <div className='icon'>
-                                <img src={`${import.meta.env.BASE_URL}images/`} alt="" />
-                            </div>
-
-                            <h4>Apache Tomcat</h4>
-                        </div>
-
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/apache-tomcat-icon.png`} alt="" />
+                        <span>Apache Tomcat</span>
                     </div>
                 </div>
+            </div>
 
+            <div className="skill-section">
+                <article className="skill-info">
+                    <div className="skill-icon"><i className="bi bi-shop-window"></i></div>
+                    <h3>SEO, Digital Marketing</h3>
+                </article>
 
-                {/* TODO.
-                    SEO & Digital Marketing
+                <div className="cards">
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/google-business-icon.png`} alt="" />
+                        <span>Google Business Profile</span>
+                    </div>
 
-                    Google Business Profile
-                    Google Ads
-                    Google Analytics
-                    Google Search Console
-                */}
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/google-ads-icon.png`} alt="" />
+                        <span>Google Ads</span>
+                    </div>
 
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/google-analytics-icon.png`} alt="" />
+                        <span>Google Analytics</span>
+                    </div>
+
+                    <div className="card">
+                        <img src={`${import.meta.env.BASE_URL}images/google-search-console-icon.png`} alt="" />
+                        <span>Google Search Console</span>
+                    </div>
+                </div>
             </div>
 
         </div>
-       </>
+    </>
 
   );
 }
