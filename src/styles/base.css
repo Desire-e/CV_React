@@ -5,7 +5,6 @@
 
 /* ===================== 
    Utilidades generales.
-   Buttons.
 ===================== */
 
 .btn-cta {
@@ -106,6 +105,33 @@
 
 
 
+.overlay {
+  position: fixed; /* no se mueve al hacer scroll, permanece en misma posición. */
+  inset: 0;   /* top:0 right:0 bottom:0 left:0 */
+  
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* hace que no pueda recibir clicks */
+  
+  /* transition: propiedad duración función-retardo retraso; */
+  transition: 
+    opacity 0.3s ease, /* al abrir, visibility pasa a visible inmediatamente y opacity se anima */
+    visibility 0s linear 0.3s;
+  
+    z-index: 50;
+}
+.overlay.active {
+  transition: opacity 0.3s ease;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.modal-active {
+  overflow: hidden;
+}
 
 /* ------------------------------------- */
 /* Estilos de mis componentes en App.jsx */
@@ -220,8 +246,6 @@
    Contiene Navtab, logo
 ===================== */
 
-/* TODO. Hamburguer menu MOBILE */
-
 header {
   display: flex;
   justify-content: space-between;
@@ -234,15 +258,116 @@ header {
   width: auto;
 }
 
-#btn-hamburger {
-  display:none;
-  font-size: 2rem;
+header .logo, .hamburger-menu .logo {
+  max-width: 170px;
+}
+
+#btn-hamburger { display:none; }
+
+@media (max-width: 320px) {
+  .hamburger-menu .logo{
+    max-width: 130px;
+  }
+
+  .hamburger-menu #btn-close {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
+    
   #btn-hamburger{
     display:block;
+    font-size: 2rem;
+
+    /* reset estilos button */
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
   }
+
+  /* .hamburger-menu { display: none; } */
+
+  .hamburger-menu {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--bg-color);
+
+    position: absolute;
+    left: 0;
+    top:0;
+
+    width: 80vw;
+    height: 100vh;
+    padding: 2rem;
+
+    z-index: 60;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger-menu.active {
+    transform: translateX(0);
+  }
+
+  .hamburger-menu a { 
+    color: var(--txt-primary-color); 
+    text-decoration: none; 
+  }
+
+  .hamburger-head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hamburger-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger-item{
+    border-bottom: 0.6px solid #ffffff2c;
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+
+    transition: all 0.2s;
+  }
+  .hamburger-item i {font-size: 1.2rem;}
+
+  .hamburger-item:hover, .hamburger-item:hover i {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .hamburger-foot {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  #btn-close {
+    font-size: 1.5rem;
+
+    /* reset estilos button */
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+  }
+
+
+
   
   header { 
     margin: 0;
@@ -253,7 +378,7 @@ header {
   /* header img {order: 1;}  */
 
   /* header .btn.btn-outline-light { order: 2; } */
-  header .btn.btn-outline-light { display: none; }
+  header .contact-button { display: none; }
 
   /* .navtab-container { order: 3; } */
   .navtab-container, .navtab-container *  { display: none; }
@@ -407,10 +532,8 @@ footer {
   background: linear-gradient(150deg,rgba(16, 22, 58, 1) 45%, rgba(80, 44, 52, 1) 71%, rgba(198, 100, 50, 1) 100%);
 }
 
-@media(max-width:768px) {
-  footer {
-    
-  } 
+footer .logo {
+  max-width: 250px;
 }
 
 /* footer p, footer ul { font-size: 0.9em; } */

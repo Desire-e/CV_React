@@ -21,9 +21,8 @@ function HeroLanding() {
                 <p id="slogan">En formación, flexible y enfocada en el desarrollo backend.</p>
 
 
-                {/* TODO. Put routes */}
                 <div className='buttons'>
-                    <ButtonCta route="#" id="my-projects-btn">
+                    <ButtonCta route="/portfolio" id="my-projects-btn">
                         Mis proyectos
                         <i className="bi bi-arrow-right-short"></i>
                     </ButtonCta>

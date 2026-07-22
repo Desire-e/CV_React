@@ -11,7 +11,6 @@ function Skills() {
         Evita warnings y posibles bugs en componentes dinámicos 
         */
     <>
-
         <div id="skills"></div>
 
         <div className="contenido skills">

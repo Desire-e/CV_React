@@ -1,22 +1,60 @@
 
 import Navtab from "./Navtab";
 import Button from 'react-bootstrap/Button';
+import HamburgerMenu from "./HamburgerMenu";
 
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
-  return (
-    <header>
-      <img src={`${import.meta.env.BASE_URL}images/logotipo.png`} 
-      className="" alt="Logotipo" width={"170px"}/>
-      
-      <Navtab />
 
-      <Button variant="outline-light">Contacto</Button>
+    // ---- Hamburger
+    
+    // Control de estado desde Header
+    const [isOpenHamburger, setIsOpenHamburger] = useState(false);
 
-      <i id="btn-hamburger" className="bi bi-list"></i>
+    // Cambiar al estado abierto
+    function openHamburger() {
+        setIsOpenHamburger(true); 
+    };
 
-    </header>
-  );
+    // Cambiar al estado cerrado
+    function closeHamburger(){
+        if(!isOpenHamburger) return;
+        setIsOpenHamburger(false);
+    }
+
+    return (
+        <header>
+            <Link to="/">
+                <img src={`${import.meta.env.BASE_URL}images/logotipo.png`} 
+                className="logo" alt="Logotipo"/>
+            </Link>
+            
+            <Navtab />
+
+            {/* Si usara para redirigir a rutas: as={Link} le indica que se renderice como el componente Link
+                <Button
+                as={Link}
+                to="/contacto">  */}
+            <Button href="#footer" className="contact-button" variant="outline-light">Contacto</Button>
+
+            
+            
+            {/* Hamburger icon (mobile ver.) */}
+
+            <button id="btn-hamburger" onClick={openHamburger}>
+                <i className="bi bi-list"></i>  
+            </button>
+
+            <HamburgerMenu 
+            isOpen={isOpenHamburger} 
+            closeHamburger={closeHamburger} 
+            />
+            
+
+        </header>
+    );
 }
 export default Header;
 

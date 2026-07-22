@@ -9,6 +9,20 @@ Sirve como enrutador: asocia URLs con paginas
 */
 
 
+
+/* react-router-dom
+Librería que permite:
+- Cambiar de página sin recargar
+- Definir rutas
+- Redirigir
+- Navegar programáticamente
+Concede: <Link>, <BrowserRouter>, <Route> */  
+
+// 1º instalar react route: npm install react-router-dom
+// 2º configurar rutas en App.jsx
+// 3º Usar .Link
+
+
 // sistema de navegación
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
@@ -68,6 +82,7 @@ function AppContent() {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       
+      <div id="footer"></div>
       <Footer />
     </>
   );
