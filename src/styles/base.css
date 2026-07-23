@@ -1,63 +1,6 @@
-/* ------------------------------------- */
-/* Estilos componentes reutilizables */
-/* ------------------------------------- */
-
-
 /* ===================== 
-   Utilidades generales.
+   Overrides bootstrap.
 ===================== */
-
-.btn-cta {
-  padding: 1rem 3rem;
-  
-  font-style: normal;
-  text-decoration: none;
-  font-size: 1.1rem;
-
-  color:white;
-  background: linear-gradient(120deg,   rgb(128, 63, 14) 30%, var(--accent-color-2) 100%);
-  
-  border: 1px transparent solid;
-  border-radius: 0.5rem;
-
-  transform: scale(1);
-  transition: transform 0.5s ease;
-}
-
-.btn-cta:hover {  transform: scale(1.02); }
-
-
-.button-scroll {
-  font-style: normal;
-  text-decoration: none;
-  font-size: 2rem;
-  color:white;
-  background: none;
-  border: none;
-  
-  width: 100%;
-  text-align: center;
-  opacity:0.7;
- 
-  /* Timing function: cómo se distribuye la velocidad a lo largo de la animación
-   ease-in-out Empieza lento, acelera en el medio, termina lento
-   linear Velocidad constante
-   ease Empieza rápido, termina lento (default de CSS)
-   ... */
-  animation: upDownAnimation 3s ease-in-out infinite;
-}
-
-@keyframes upDownAnimation {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-}
-
-
-/* overrides bootstrap */
 
 .btn {
   --bs-btn-padding-x: 1rem;
@@ -88,7 +31,6 @@
 @media (max-width: 768px) { .h5 { font-size: 1.2em; } } */
 
 
-/* ContactBtn.jsx -- LandingPage */
 .btn-primary {
     --bs-btn-bg: var(--txt-secondary-color);
     --bs-btn-border-color: var(--txt-secondary-color);
@@ -103,35 +45,12 @@
     width: min(200px, 100%);
 }
 
+/* .card{
+  border:transparent;
+  color: var(--txt-primary-color);
+} */
 
 
-.overlay {
-  position: fixed; /* no se mueve al hacer scroll, permanece en misma posición. */
-  inset: 0;   /* top:0 right:0 bottom:0 left:0 */
-  
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none; /* hace que no pueda recibir clicks */
-  
-  /* transition: propiedad duración función-retardo retraso; */
-  transition: 
-    opacity 0.3s ease, /* al abrir, visibility pasa a visible inmediatamente y opacity se anima */
-    visibility 0s linear 0.3s;
-  
-    z-index: 50;
-}
-.overlay.active {
-  transition: opacity 0.3s ease;
-
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-body.modal-active {
-  overflow: hidden;
-}
 
 /* ------------------------------------- */
 /* Estilos de mis componentes en App.jsx */
@@ -148,50 +67,31 @@ body.modal-active {
 
   height: 100vh;
 
-  background: url(/images/background.png);
-  background-position: 5%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   padding: 1.2rem;
   justify-content: space-between;
   gap: 2rem;
 }
+
+.hero-container.landing{
+  background: url(/images/background.png);
+  background-position: 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-container.portfolio,
+.hero-container.experience {
+  height: 70vh;
+  background: transparent;
+}
+
+
 @media(max-width:768px){
-  .hero-container{
+  .hero-container {
     background-position: 60% 100%;
     padding: 2rem;
   }
 }
-/* 
-    background:
 
-        /* brillo naranja 
-        radial-gradient(
-            circle at 100% 25%,
-            rgba(255,115,35,.35) 0%,
-            rgba(255,115,35,.18) 20%,
-            rgba(255,115,35,.08) 40%,
-            transparent 70%
-        ),
-
-        /* transición morada 
-        radial-gradient(
-            circle at 65% 50%,
-            rgba(90,55,140,.28) 0%,
-            rgba(70,40,110,.18) 35%,
-            transparent 65%
-        ),
-
-        /* fondo azul 
-        linear-gradient(
-            90deg,
-            #08152f 0%,
-            #0d1436 45%,
-            #1a1735 100%
-        );
-
-*/
 
 /* Animación de partículas en Hero de LandingPage */
 .dust {
@@ -435,11 +335,12 @@ header .logo, .hamburger-menu .logo {
   font-size: 3.5rem;   
 }
 
-.intro-container .content p#greetings { 
-  font-size: 1.4rem; 
-  margin: 0;
+@media(max-width:768px){
+  .intro-container {
+    margin: 0 5rem;
+  }
+  .intro-container .content h1 { font-size: 2.5rem; }
 }
-.intro-container .content p#role { font-size: 2rem; }
 
 @media(max-width:426px){
   .intro-container {
@@ -447,25 +348,22 @@ header .logo, .hamburger-menu .logo {
   }
 }
 
-@media(max-width:768px){
-  .intro-container {
-    margin: 0 5rem;
-  }
+/* LandingIntro.jsx */
 
-  .intro-container .content h1 {
-    font-size: 2.5rem;
-  }
-  .intro-container .content p#greetings {
-    font-size: 1.2rem;
-  }
-  .intro-container .content p#role {
-    font-size: 1.7rem;
-  }
+.intro-container.landing .content p#greetings { 
+  font-size: 1.4rem; 
+  margin: 0;
+}
+
+.intro-container.landing .content p#role { font-size: 2rem; }
+
+@media(max-width:768px){
+  .intro-container.landing .content p#greetings { font-size: 1.2rem; }
+  .intro-container.landing .content p#role { font-size: 1.7rem; }
 }
 
 
-/* LandingIntro */
-.landing.intro-container .buttons {
+.intro-container.landing .buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -474,43 +372,76 @@ header .logo, .hamburger-menu .logo {
 }
 
 @media(max-width:426px){
-  .landing.intro-container .buttons {
+  .intro-container.landing .buttons {
     margin:1.5rem 0;
     width: 100%;
     gap: 0.5rem;
   }
-  .landing.intro-container .buttons a, 
-  .landing.intro-container .buttons button {
+
+  .intro-container.landing .buttons a, 
+  .intro-container.landing .buttons button {
     padding: 0.7rem 1.5rem; 
     width: 100%;
   }
 }
 
-/* Variante de btn-cta en LandingIntro - #my-projects-btn */
-.landing.intro-container .btn-cta i { margin-left: 0.6rem; }
+/* variante de btn-cta en LandingIntro.jsx */
+
+.landing.intro-container .btn-cta#my-projects-btn i { margin-left: 0.6rem; }
 
 @media(max-width:768px){
-  .landing.intro-container .btn-cta i { margin-left: 0.3rem; }
+  .intro-container.landing .btn-cta#my-projects-btn i { margin-left: 0.3rem; }
 }
 
-.landing.intro-container .btn-cta i {
+.intro-container.landing .btn-cta#my-projects-btn i {
   display: inline-block;
   transform: translateX(0);
   transition: transform 0.5s ease;
 }
 
-.landing.intro-container .btn-cta:hover i {
+.intro-container.landing .btn-cta#my-projects-btn:hover i {
   transform: translateX(40%);  
 }
 
 
-/* TODO. */
+/* PortfolioIntro.jsx */
 
-/* PortfolioIntro */
+.intro-container.portfolio {
+  justify-content: center;  
+  margin-top:0;
+}
 
-/* ExperienceIntro */
+.intro-container.portfolio .content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+
+  max-width: 32vw;
+}
+
+@media(max-width:768px){
+  .intro-container.portfolio .content {
+    max-width: 50vw;
+  }  
+}
+
+@media(max-width:426px){
+  .intro-container.portfolio .content {
+    max-width: 70vw;
+  }  
+}
+
+.intro-container.portfolio .content .pretitle {
+  font-size: 1.5rem;
+}
+
+.intro-container.portfolio .content .description {
+  margin: 1rem 0;
+}
 
 
+/* ExperienceIntro.jsx */
 
 
 /* ===================== 
@@ -528,9 +459,14 @@ footer {
   /* margin: 0; */
 
   color: #fff;
-  background: #10163A;
-  background: linear-gradient(150deg,rgba(16, 22, 58, 1) 45%, rgba(80, 44, 52, 1) 71%, rgba(198, 100, 50, 1) 100%);
+  background: transparent;
 }
+
+/* El footer se estiliza solo si existe un hermano 
+.container-page.landing antes (en cualquier posición) */
+.container-page.landing ~ footer {
+  background: #10163A;
+  background: linear-gradient(150deg,rgba(16, 22, 58, 1) 45%, rgba(80, 44, 52, 1) 71%, rgba(198, 100, 50, 1) 100%);}
 
 footer .logo {
   max-width: 250px;

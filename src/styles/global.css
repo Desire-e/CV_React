@@ -1,10 +1,13 @@
 /* CSS componentes base usados en App.jsx */
 @import "./base.css";
 
-/* importa css de los /pages */
+/* CSS componentes reusables */
+@import "./reusables.css";
+
+/* CSS de los /pages */
 @import "./pages.css";
 
-/* importa css de mis propios componentes usados dentro de cada /page */
+/* CSS de mis propios componentes usados dentro de cada /page */
 @import "./components.css";
 
 
@@ -19,10 +22,69 @@
   padding: 0;
 }
 
+
 body {
   color:var(--txt-primary-color);
   background-color: var(--bg-color);
 }
+
+/* Si body no contiene container de LandingPage */
+
+body:not(:has(.container-page.landing)) {
+    background:
+    /* radial-gradient(
+        circle at 100% 45%,
+        rgba(255,115,35,0.35) 10%,
+        rgba(255,115,35,0.18) 40%,
+        rgba(255,115,35,0.08) 60%,
+        transparent 70%
+    ),
+
+    radial-gradient(
+        circle at 65% 50%,
+        rgba(90,55,140,.28) 0%,
+        rgba(70,40,110,.18) 35%,
+        transparent 65%
+    ),
+
+    linear-gradient(
+        90deg,
+        #0C1236 0%,
+        #0d1436 45%,
+        #1a1735 100%
+    ); */
+    /* brillo naranja  */
+    radial-gradient(
+        circle at 100% 30%,
+        rgba(255,115,35,0.35) 10%,
+        rgba(255,115,35,0.18) 26%,
+        rgba(255,115,35,0.08) 43%,
+        transparent 70%
+    ),
+
+    /* transición morada  */
+    radial-gradient(
+        circle at 65% 50%,
+        rgba(90,55,140,.28) 0%,
+        rgba(70,40,110,.18) 30%,
+        transparent 65%
+    ),
+
+    /* fondo azul  */
+    linear-gradient(
+        90deg,
+        #0C1236 0%,
+        #0d1436 45%,
+        #1a1735 100%
+    )
+}
+
+/* Desactivar scroll cuando un modal esté activo */
+
+body.modal-active {
+  overflow: hidden;
+}
+
 
 ul {
   list-style: none; /* Elimina las viñetas */
@@ -37,6 +99,9 @@ hr{
   border: 1px solid white;
   height: 2px;
 }
+
+
+
 
 
 /* Variables globales */
@@ -58,8 +123,8 @@ hr{
   --accent-color: rgb(240, 129, 29);
   --accent-color-2:  rgb(199, 101, 26);
   
-  /* --border-color:#1E293B; */
-  --border-color:#182050;
+  /* --border-color: #1E293B; */
+  --border-color: #182050;
 
   /* morados-naranjado: */
   /* background-color:#7c5257; */

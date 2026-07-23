@@ -1,7 +1,7 @@
 
-function Hero({children}) {
+function Hero({children, heroClass}) {
   return (
-    <div className="hero-container">
+    <div className={`hero-container ${heroClass}`}>
         {/* <Header /> */}
         {/* <XIntro /> */}
         {children}

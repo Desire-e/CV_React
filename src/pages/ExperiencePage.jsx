@@ -5,6 +5,7 @@ import Formations from '../components/experience/Formations'
 function ExperiencePage () {
     return(
         <div className="container-page">
+
             {/* <div className="section"> */}
             <section>
                 <h2>Proyectos personales</h2>
@@ -20,7 +21,6 @@ function ExperiencePage () {
                     <Collaborations />
                 </div>
             </section>
-
 
             {/* <div className="section"> */}
             <section>

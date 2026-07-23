@@ -63,9 +63,14 @@ function AppContent() {
   // Ese contexto solo existe dentro del árbol que envuelve <Router>. 
   const location = useLocation();
 
+  let heroClass = "";
+  if(location.pathname === "/") heroClass="landing";
+  if(location.pathname === "/portfolio") heroClass="portfolio";
+  if(location.pathname === "/experience") heroClass="experience";
+
   return (
    <>
-      <Hero>
+      <Hero heroClass={heroClass} >
         {/* Header + Navtab */}
         <Header />
 

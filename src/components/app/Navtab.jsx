@@ -13,15 +13,19 @@ function Navtab() {
     return (
         <div className='navtab-container'>
 
-            {/* activeKey: Prop de React Bootstrap. Indica qué componente se selecciona en cada render
+            {/* 
+            activeKey: Prop de React Bootstrap. Indica qué componente se selecciona en cada render
             location.pathname dará la ruta relativa (/portfolio, ...) 
             
-            defaultActiveKey: Indica valor inicial, no cambia) */}
+            defaultActiveKey: Indica valor inicial, no cambia) 
+            */}
             <Nav variant="underline" defaultActiveKey="/" activeKey={location.pathname}>
                 <Nav.Item>
 
-                    {/* eventKey: Prop que usan los componentes de react-bootstrap para identificar 
-                    de forma única cada ítem dentro de un grupo. */}
+                    {/* 
+                    eventKey: Prop que usan los componentes de react-bootstrap para identificar 
+                    de forma única cada ítem dentro de un grupo. 
+                    */}
                     <Nav.Link as={Link} to="/" eventKey="/">Landing</Nav.Link>
                 </Nav.Item>
 

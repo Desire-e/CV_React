@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 // import skills from '../../data/landing/skills.json';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import CardsAccordions from '../reusables/CardsAccordions';
 
 function Skills() {
 
@@ -10,6 +11,7 @@ function Skills() {
         Ayuda a React a actualizar solo los elementos que cambian
         Evita warnings y posibles bugs en componentes dinámicos 
         */
+
     <>
         <div id="skills"></div>
 
@@ -17,159 +19,52 @@ function Skills() {
 
             <h2>Habilidades</h2>
 
-            <div className="skill-section">
-                <article className="skill-info">
-                    <div className="skill-icon"><i className="bi bi-code-slash"></i></div>
-                    <h3>Frontend</h3>
-                </article>
+            <CardsAccordions
+            cardsHead={{title:"Frontend", icon:"bi bi-code-slash"}} 
+            cardsBody={[
+                    {image: "html-icon.png" ,description:"HTML5"},
+                    {image: "css-icon.png" ,description:"CSS3"},
+                    {image: "js-icon.png" ,description:"JavaScript"},
+                    {image: "bootstrap-5-logo-icon.png" ,description:"Bootstrap 5"}, 
+                    {image: "react-js-icon.png" ,description:"React"}, 
+                ]} 
+            />
 
-                <div className="cards">
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/html-icon.png`} alt=""/>
-                        <span>HTML5</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/css-icon.png`} alt=""/>
-                        <span>CSS3</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/js-icon.png`} alt=""/>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/bootstrap-5-logo-icon.png`} alt=""/>
-                        <span>Bootstrap</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/react-js-icon.png`} alt=""/>
-                        <span>React</span>
-                    </div>
-                </div>
-            </div> 
-
-
-            <div className="skill-section">
-                <article className="skill-info">
-                    <div className="skill-icon"><i className="bi bi-braces"></i></div>
-                    <h3>Backend</h3>
-                </article>
-                
-                
-                <div className="cards">
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/php-icon.png`} alt="" />
-                        <span>PHP</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/laravel-icon.png`} alt="" />
-                        <span>Laravel</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/java-icon.png`} alt="" />
-                        <span>Java</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/node-js-icon.png`} alt="" />
-                        <span>Node.js</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/api-icon.png`} alt="" />
-                        <span>RESTful API</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/mysql-icon.png`} alt="" />
-                        <span>MySQL</span>
-                    </div>
-                </div>
+            <CardsAccordions
+            cardsHead={{title:"Backend", icon:"bi bi-braces"}} 
+            cardsBody={[
+                    {image: "php-icon.png" ,description:"PHP"},
+                    {image: "laravel-icon.png" ,description:"Laravel"},
+                    {image: "java-icon.png" ,description:"Java"},
+                    {image: "node-js-icon.png" ,description:"Node.js"}, 
+                    {image: "api-icon.png" ,description:"RESTful API"}, 
+                    {image: "mysql-icon.png" ,description:"MySQL"}, 
+                ]} 
+            />
             
-            </div>
+            <CardsAccordions
+            cardsHead={{title:"DevOps, Deployment", icon:"bi bi-cloud"}} 
+            cardsBody={[
+                    {image: "aws-icon.png" ,description:"AWS EC2"},
+                    {image: "docker-icon.png" ,description:"Docker"},
+                    {image: "git-icon.png" ,description:"Git, GitHub"},
+                    {image: "google-cloud-icon.png" ,description:"Google Cloud Console"}, 
+                    {image: "dns-icon.png" ,description:"DNS management"},
+                    {image: "filezilla-icon.png" ,description:"FTP / Fillezila"},
+                    {image: "apache-http-icon.png" ,description:"Apache HTTP Server"},
+                    {image: "apache-tomcat-icon.png" ,description:"Apache Tomcat"}
+                ]} 
+            />
 
-            <div className="skill-section">
-                <article className="skill-info">
-                    <div className="skill-icon"><i className="bi bi-cloud"></i></div>
-                    <h3>DevOps, Deployment</h3>
-                </article>
-
-                <div className="cards">
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/aws-icon.png`} alt="" />
-                        <span>AWS EC2</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/docker-icon.png`} alt="" />
-                        <span>Docker</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/git-icon.png`} alt="" />
-                        <span>Git, GitHub</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/google-cloud-icon.png`} alt="" />
-                        <span>Google Cloud Console</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/dns-icon.png`} alt="" />
-                        <span>DNS management</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/filezilla-icon.png`} alt="" />
-                        <span>FTP / Fillezila</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/apache-http-icon.png`} alt="" />
-                        <span>Apache HTTP Server</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/apache-tomcat-icon.png`} alt="" />
-                        <span>Apache Tomcat</span>
-                    </div>
-                </div>
-            </div>
-
-            <div className="skill-section">
-                <article className="skill-info">
-                    <div className="skill-icon"><i className="bi bi-shop-window"></i></div>
-                    <h3>SEO, Digital Marketing</h3>
-                </article>
-
-                <div className="cards">
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/google-business-icon.png`} alt="" />
-                        <span>Google Business Profile</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/google-ads-icon.png`} alt="" />
-                        <span>Google Ads</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/google-analytics-icon.png`} alt="" />
-                        <span>Google Analytics</span>
-                    </div>
-
-                    <div className="card">
-                        <img src={`${import.meta.env.BASE_URL}images/google-search-console-icon.png`} alt="" />
-                        <span>Google Search Console</span>
-                    </div>
-                </div>
-            </div>
+            <CardsAccordions
+            cardsHead={{title:"SEO, Digital Marketing", icon:"bi bi-shop-window"}} 
+            cardsBody={[
+                    {image: "google-business-icon.png" ,description:"Google Business Profile"}, 
+                    {image: "google-ads-icon.png" ,description:"Google Ads"},
+                    {image: "google-analytics-icon.png" ,description:"Google Analytics"},
+                    {image: "google-search-console-icon.png" ,description:"Google Search Console"},
+                ]} 
+            />
 
         </div>
     </>

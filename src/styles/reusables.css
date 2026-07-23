@@ -1,0 +1,334 @@
+
+/* -------------------------- 
+    REUSABLES.
+    componentes reusables
+  -------------------------- */
+
+
+/* ================
+   ButtonCta.jsx 
+================ */
+
+.btn-cta {
+  padding: 1rem 3rem;
+  
+  font-style: normal;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  color:white;
+  background: linear-gradient(
+    120deg, 
+    rgb(128, 63, 14) 30%, 
+    var(--accent-color-2) 100%);
+  
+  border: 1px transparent solid;
+  border-radius: 0.5rem;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.btn-cta:hover {  transform: scale(1.02); }
+
+/* ================
+   ButtonScroll.jsx 
+================ */
+
+.button-scroll {
+  font-style: normal;
+  text-decoration: none;
+  font-size: 2rem;
+  color:white;
+  background: none;
+  border: none;
+  
+  width: 100%;
+  text-align: center;
+  opacity:0.7;
+ 
+  /* Timing function: cómo se distribuye la velocidad a lo largo de la animación
+   ease-in-out Empieza lento, acelera en el medio, termina lento
+   linear Velocidad constante
+   ease Empieza rápido, termina lento (default de CSS)
+   ... */
+  animation: upDownAnimation 3s ease-in-out infinite;
+}
+
+@keyframes upDownAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* ================
+   CardsAccordion.jsx 
+================ */
+
+/* SECCIONES */
+.cards-section{
+  display:grid;
+  grid-template-columns: 20% 1fr;
+
+  gap:40px;
+  margin-bottom:35px;
+}
+
+@media(max-width:426px){
+  .cards-section{
+    grid-template-columns: 1fr;
+
+    gap:1.5rem;
+    margin:0;
+    padding: 2rem;
+
+    background: var(--bg-color-light);
+  }
+}
+
+@media(max-width:1024px){
+  .cards-section{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ARTICLE */
+
+.cards-head{
+  display:flex;
+  gap:20px;
+  height: fit-content;
+  align-items: center;
+}
+
+.cards-head .icon {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-shrink:0; /* no crece ante espacio sobrante */
+
+  position: relative;
+  z-index: 1;
+
+  width:75px;
+  height:75px;
+  aspect-ratio: 1/1;
+  font-size: 1.8rem;
+
+  border-radius:50%;
+  border:2px solid var(--icon-color);
+  
+  background: var(--bg-color);
+  color:var(--icon-color);
+}
+@media(max-width:426px){
+  .cards-head .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+
+.cards-head .icon::before{
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: -1;
+  opacity: 0.8;
+  
+  background: radial-gradient(
+      circle,
+      color-mix(in srgb, var(--glow-icon-color) 35%, transparent) 0%,
+      color-mix(in srgb, var(--glow-icon-color) 15%, transparent) 45%,
+      transparent 75%
+  );
+
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100%{
+      opacity: 0.4;
+  }
+
+  50%{
+      opacity: 1;
+  }
+}
+
+.cards-section:nth-child(6) .cards-head .icon {
+  --icon-color:#3d439b;
+  --glow-icon-color:#4851cd;
+}
+.cards-section:nth-child(5) .cards-head .icon{
+  --icon-color:#4b3f7b;
+  --glow-icon-color:#6a57b7;
+}
+.cards-section:nth-child(4) .cards-head .icon{
+  --icon-color: #6e4a64;
+  --glow-icon-color: #8e547d;
+}
+.cards-section:nth-child(3) .cards-head .icon{
+  --icon-color: #784b42; 
+  --glow-icon-color: #955c50; 
+}
+.cards-section:nth-child(2) .cards-head .icon{
+  --icon-color: #a0572e;
+  --glow-icon-color: #e47b3f;
+}
+
+.cards-head h3{ font-size: 1.5rem; }
+
+/* GRID */
+
+.cards-group {
+  display:grid;
+  /* grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); */
+
+  gap: 1.4rem;
+  padding: 1.2rem;
+
+  height: fit-content;
+  
+  /* position: relative;
+  overflow: hidden; */
+  
+  border-radius:8px;
+  border:1px solid;
+  border-color:rgba(120, 120, 255, 0.326);
+  box-shadow:
+    0 0 25px rgba(30, 30, 255, 0.15),
+    inset 0 1px 0 rgba(255,255,255,.06);
+
+
+
+  width: 955px;
+  grid-template-columns: repeat(auto-fit,165px);
+}
+
+@media(max-width:426px){
+  .cards-group {
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    width: auto;
+    padding: 1rem 0;
+
+    border:none;
+    box-shadow: none;
+  }
+
+  .custom-card {
+    flex-direction: row !important;
+    justify-content: left !important;
+    gap:0.5rem;
+
+    padding:0 !important;
+    padding-bottom: 0.8rem !important;
+    width: 100% !important;
+
+    background: var(--bg-color-light) !important;
+
+    border:none !important;
+    border-bottom: 1px solid #1b2559 !important;
+    border-radius:0% !important;
+  }
+  .custom-card::after { 
+    display: none;
+  }
+
+  .custom-card img {
+    margin: 0 !important;
+  }
+}
+
+@media(max-width:1024px){
+  .cards-group {
+    width: auto !important;
+  }
+
+  .custom-card {
+    width: auto !important;
+  }
+}
+
+
+/* CARD */
+
+.custom-card {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  text-align: center;
+
+  height:100%;
+  padding:1rem;
+
+  background:var(--bg-color-light);
+  color: var(--txt-primary-color);
+
+  border-radius:8px;
+  border:1px solid var(--border-color);
+
+
+  width: 160px;
+}
+
+.custom-card img{
+  width: 2.2rem;
+  margin-bottom:18px;
+}
+
+.custom-card span{
+  font-weight:500;
+}
+/* linea inferior */
+.custom-card::after{
+  content:"";
+
+  width:45px;
+  height:4px;
+
+  margin-top:18px;
+  border-radius:50px;
+  background:var(--accent-color-2);
+}
+
+
+/* ================
+   Overlay.jsx 
+================ */
+
+.overlay {
+  position: fixed; /* no se mueve al hacer scroll, permanece en misma posición. */
+  inset: 0;   /* top:0 right:0 bottom:0 left:0 */
+  
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* hace que no pueda recibir clicks */
+  
+  /* transition: propiedad duración función-retardo retraso; */
+  transition: 
+    opacity 0.3s ease, /* al abrir, visibility pasa a visible inmediatamente y opacity se anima */
+    visibility 0s linear 0.3s;
+  
+    z-index: 50;
+}
+.overlay.active {
+  transition: opacity 0.3s ease;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}

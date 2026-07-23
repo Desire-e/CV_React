@@ -1,7 +1,8 @@
 function ExperienceIntro() {
-  return (
-    <div>
-    </div>
-  );
+    return (
+        <div className="experience intro-container">
+        
+        </div>
+    );
 }
 export default ExperienceIntro;

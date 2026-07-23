@@ -7,17 +7,37 @@
   /* align-items: center; */
   justify-content: center;
   
-  background-color: var(--bg-color);  
-  
+  background-color: transparent;
+    
   width: 100%;
-  padding: clamp(2rem, 10vw, 10rem) clamp(2rem, 12vw, 12rem);
-  gap: clamp(9rem, 13vw, 13rem);
+  padding: clamp(2rem, 4vw, 4rem) clamp(2rem, 12vw, 12rem);
+  gap: clamp(2rem, 4vw, 5rem);
 
   /* clamp(mínimo, preferido, máximo)
     Mínimo -- El valor más pequeño permitido.
     Preferido -- El valor que se aplicará normalmente, a menudo una unidad relativa como % o vw.
     Máximo -- El valor más grande permitido */
 }
+
+
+@media(max-width:768px){
+  .container-page{
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+    .container-page {
+        padding: 1.3rem !important;
+    }
+}
+
+@media(max-width:1024px){
+  .container-page{
+    padding: 6rem;
+  }
+}
+
 
 
 section {
@@ -51,9 +71,14 @@ section {
   background-color: var(--accent-color); /* color del border */
 }
 
+/* Variantes */
 
+.container-page.landing {
+  padding: clamp(2rem, 10vw, 10rem) clamp(2rem, 12vw, 12rem);
+  background-color: var(--bg-color);  
 
-
+  gap: clamp(9rem, 13vw, 13rem);
+}
 
 
 
