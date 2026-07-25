@@ -36,7 +36,7 @@ function PortfolioPage () {
 
     return(
         <div className="container-page portfolio">
-            <PortfolioTablist isMovile={isMobile}/>
+            <PortfolioTablist isMobile={isMobile}/>
         </div>
     );
 } 
