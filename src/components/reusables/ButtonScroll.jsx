@@ -1,3 +1,10 @@
+/**
+ * Componente reutilizable
+ * Usado en LandingIntro
+ */
+
+import './ButtonScroll.css';
+
 function ButtonScroll({scrollDown, position="#"}) {
     return (
     <a role="button" href={position} className="button-scroll">

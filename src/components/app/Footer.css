@@ -1,0 +1,121 @@
+
+/* ===================== 
+   Footer.jsx 
+===================== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  align-items: center;
+  align-content: space-evenly;
+    
+  /* margin: 0; */
+
+  color: #fff;
+  background: transparent;
+}
+
+/* El footer se estiliza solo si existe un hermano 
+.container-page.landing antes (en cualquier posición) */
+.container-page.landing ~ footer {
+  background: #10163A;
+  background: linear-gradient(40deg,rgba(16, 22, 58, 1) 35%, rgba(80, 44, 52, 0.6) 90%, rgba(198, 100, 50, 0.3) 100%);
+}
+
+footer .logo {
+  max-width: 250px;
+}
+
+/* footer p, footer ul { font-size: 0.9em; } */
+
+footer h5 { color: var(--accent-color); }
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 5rem 2rem;
+
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media(max-width:768px) {
+  .footer-top {
+    padding: 2rem;
+    
+    width: auto;
+    justify-content: left;
+    gap: 3.5rem;
+  }
+}
+@media(max-width:426px) {
+  .footer-top {
+    flex-direction: column;    
+    gap: 1.5rem;
+  }
+}
+
+.footer-top .footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+@media(max-width:768px) {
+  .footer-top .footer-item {
+    padding: 0;
+    gap: 2rem;
+    word-break: break-all;
+  }
+}
+
+
+.footer-top .footer-item:first-child  {
+  width: min-content;
+}
+
+.footer-top .footer-item ul li i {
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  color:#fff;
+}
+
+.footer-item .profiles a {
+  font-size: 1.5rem;
+  margin-right: 1.7rem;
+  color:#fff;
+}
+.footer-item .profiles .logotipo { margin-bottom: 1rem; }
+
+
+.separator{
+  border-left: 1.5px solid rgba(255, 255, 255, 0.345); 
+  height: auto;
+}
+@media (max-width: 768px) {
+  .separator {
+    display: none;
+  }
+}
+
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+
+  background-color: #0000004b;  
+  width:100%;
+  margin: 0;
+  padding: 1.3rem;
+
+  justify-content: center;
+  align-items: center; 
+}
+
+.footer-bottom p { margin: 0; }
+

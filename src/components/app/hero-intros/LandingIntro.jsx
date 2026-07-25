@@ -1,8 +1,10 @@
+import './XIntro.css';
+
 import Button from 'react-bootstrap/Button';
 import ButtonCta from '../../reusables/ButtonCta';
 import ButtonScroll from '../../reusables/ButtonScroll';
 
-import DustParticlesAnimation from '../DustParticlesAnimation';
+import DustParticlesAnimation from './DustParticlesAnimation';
 
 function HeroLanding() {
     return (

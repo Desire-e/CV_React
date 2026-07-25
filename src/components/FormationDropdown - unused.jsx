@@ -1,24 +1,9 @@
-/**** ESTADOS EN REACT:
-Un estado (state) es una variable especial.
-- Guarda información
-- Puede cambiar con el tiempo
-- Cuando cambia, React vuelve a renderizar el componente
-
-Sintaxis básica:
-import { useState } from "react";
-const [valor, setValor] = useState(valorInicial);
-// valor -- estado actual
-// setValor -- función para actualizarlo
-// valorInicial -- cómo empieza
-
-Usos: principalmente para componentes interactivos
-*/
-
-
-
-// Dropdown individual de cada subsección de formación
+// Dropdown
 // - Con props para obtener formations.json desde Formation.jsx
 // - Con state para interactividad (evento click)
+
+import './FormationDropdown.css'
+
 import { useState } from "react";
 
 function FormationDropdown({title, course, knowns}){

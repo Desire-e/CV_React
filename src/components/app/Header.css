@@ -1,0 +1,33 @@
+
+/* ===================== 
+   Header.jsx 
+   Contiene Navtab, logo, HamburgerMenu
+===================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  background:transparent;
+
+  margin: 0 3rem;
+  width: auto;
+}
+
+header .logo {
+  max-width: 170px;
+}
+
+@media(max-width:768px){
+  header { 
+    margin: 0;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  header .contact-button { display: none; }
+}
+
+

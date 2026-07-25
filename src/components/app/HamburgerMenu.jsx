@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+/**
+ * Menu hamburger - Header mobile/tablet version
+ */
 
+import './HamburgerMenu.css';
+
+import { Link } from "react-router-dom";
 // extensión de React Router que añade soporte para enlaces a anclas (#id).
 import { HashLink } from "react-router-hash-link";
 
 import Overlay from "../reusables/Overlay";
+
 
 function HamburgerMenu({isOpen, closeHamburger}) {
 
@@ -20,9 +26,9 @@ function HamburgerMenu({isOpen, closeHamburger}) {
                         
                     <button id="btn-close" type="button" onClick={closeHamburger}><i className="bi bi-x-lg"></i></button>
                 </div>
+                
 
                 <div className="hamburger-content">
-                    
                     <Link to="/" onClick={closeHamburger}>
                         <div className="hamburger-item">
                             <i className="bi bi-house"></i>
@@ -49,7 +55,6 @@ function HamburgerMenu({isOpen, closeHamburger}) {
                     <Link to="/experiencia" onClick={closeHamburger}>
                         <div className="hamburger-item">
                             <i className="bi bi-mortarboard"></i>
-                            {/* <p>Experiencia</p> */}
                             <p>Estudios</p>
                         </div>
                     </Link>
@@ -61,6 +66,7 @@ function HamburgerMenu({isOpen, closeHamburger}) {
                         </div>
                     </HashLink>
                 </div>
+
 
                 <div className="hamburger-foot">
                     

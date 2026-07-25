@@ -1,33 +1,60 @@
 [
-  {
-    "id":1,
-    "icon": "bi bi-front",
-    "title": "Frontend",
-    "items": ["HTML / CSS", "JavaScript", "React", "Bootstrap", "Responsive Design"]
-  },
-  {
-    "id":2,
-    "icon": "bi bi-filetype-java",
-    "title": "Backend",
-    "items": ["Java", "Servlets (Jakarta EE)", "PHP", "Laravel", "MySQL"]
-  },
-  {
-    "id":3,
-    "icon": "bi bi-server",
-    "title": "Despliegue y sistemas",
-    "items": ["Apache", "Tomcat", "FTP", "LDAP", "DNS", "Instancias EC2 AWS"]
-  },
-  {
-    "id":4,
-    "icon": "bi bi-gear",
-    "title": "Entornos y herramientas",
-    "items": ["Git / GitHub", "Docker", "npm", "Vite", "XAMPP", "MySQL Workbench", "Google Analytics"]
-  },
-  {
-    "id":5,
-    "icon": "bi bi-diagram-3",
-    "title": "Conceptos y Arquitectura",
-    "items": ["JSON", "Arquitectura MVC", "Arquitectura cliente-servidor", "Programación orientada a objetos",
-            "Autenticación y autorización","Control de versiones"]
-  }
+    {
+        "groupHead": {
+            "title":"Frontend", 
+            "icon":"bi bi-code-slash"
+        },
+        "groupCards": [
+            {"image": "html-icon.png" ,"description":"HTML5"},
+            {"image": "css-icon.png" ,"description":"CSS3"},
+            {"image": "js-icon.png" ,"description":"JavaScript"},
+            {"image": "bootstrap-5-logo-icon.png" ,"description":"Bootstrap 5"}, 
+            {"image": "react-js-icon.png" ,"description":"React"}
+        ]
+    }, 
+
+    {
+        "groupHead": {
+            "title":"Backend", 
+            "icon":"bi bi-braces"
+        },
+        "groupCards": [
+            {"image": "php-icon.png" ,"description":"PHP"},
+            {"image": "laravel-icon.png" ,"description":"Laravel"},
+            {"image": "java-icon.png" ,"description":"Java"},
+            {"image": "node-js-icon.png" ,"description":"Node.js"}, 
+            {"image": "api-icon.png" ,"description":"RESTful API"}, 
+            {"image": "mysql-icon.png" ,"description":"MySQL"}
+        ]                    
+    },
+
+    {                    
+        "groupHead": {
+            "title":"DevOps, Deployment", 
+            "icon":"bi bi-cloud"
+        },
+        "groupCards": [
+            {"image": "aws-icon.png" ,"description":"AWS EC2"},
+            {"image": "docker-icon.png" ,"description":"Docker"},
+            {"image": "git-icon.png" ,"description":"Git, GitHub"},
+            {"image": "google-cloud-icon.png" ,"description":"Google Cloud Console"}, 
+            {"image": "dns-icon.png" ,"description":"DNS management"},
+            {"image": "filezilla-icon.png" ,"description":"FTP / Fillezila"},
+            {"image": "apache-http-icon.png" ,"description":"Apache HTTP Server"},
+            {"image": "apache-tomcat-icon.png" ,"description":"Apache Tomcat"}
+        ]
+    },
+
+    {
+        "groupHead": {
+            "title":"SEO, Digital Marketing", 
+            "icon":"bi bi-shop-window"
+        },
+        "groupCards": [
+            {"image": "google-business-icon.png", "description":"Google Business Profile"}, 
+            {"image": "google-ads-icon.png" , "description":"Google Ads"},
+            {"image": "google-analytics-icon.png", "description":"Google Analytics"},
+            {"image": "google-search-console-icon.png", "description":"Google Search Console"}
+        ]
+    }
 ]

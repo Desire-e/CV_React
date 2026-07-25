@@ -1,0 +1,25 @@
+/* ================
+   ButtonCta.jsx 
+================ */
+
+.btn-cta {
+  padding: 1rem 3rem;
+  
+  font-style: normal;
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  color:white;
+  background: linear-gradient(
+    120deg, 
+    rgb(128, 63, 14) 30%, 
+    var(--accent-color-2) 100%);
+  
+  border: 1px transparent solid;
+  border-radius: 0.5rem;
+
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.btn-cta:hover {  transform: scale(1.02); }

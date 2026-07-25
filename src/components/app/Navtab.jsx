@@ -1,6 +1,11 @@
+/**
+ * Componente en Header
+ */
+
+import './Navtab.css';
+
 // componentes bootstrap
 import Nav from 'react-bootstrap/Nav'; 
-
 // rutas, links
 import { Link, useLocation } from "react-router-dom"; 
 
@@ -21,11 +26,8 @@ function Navtab() {
             */}
             <Nav variant="underline" defaultActiveKey="/" activeKey={location.pathname}>
                 <Nav.Item>
-
-                    {/* 
-                    eventKey: Prop que usan los componentes de react-bootstrap para identificar 
-                    de forma única cada ítem dentro de un grupo. 
-                    */}
+                    {/* eventKey: Prop que usan los componentes de react-bootstrap para identificar 
+                    de forma única cada ítem dentro de un grupo. */}
                     <Nav.Link as={Link} to="/" eventKey="/">Landing</Nav.Link>
                 </Nav.Item>
 

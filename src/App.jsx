@@ -44,9 +44,9 @@ import ExperienceIntro from "./components/app/hero-intros/ExperienceIntro";
 import Footer from "./components/app/Footer";
 
 // paginas
-import LandingPage from "./pages/LandingPage";
-import PortfolioPage from "./pages/PortfolioPage";
-import ExperiencePage from "./pages/ExperiencePage";
+import LandingPage from "./components/pages/landing/LandingPage";
+import PortfolioPage from "./components/pages/portfolio/PortfolioPage";
+import ExperiencePage from "./components/pages/experience/ExperiencePage";
 
 
 function App() {
@@ -94,6 +94,8 @@ function AppContent() {
 }
 
 export default App;
+
+
 /*
   <Router> -- Esto activa el sistema de navegación, para que los Links funcionen.
   <Routes> -- Asigna URLs con el elemento (page a la que dirige)
@@ -112,47 +114,4 @@ export default App;
     
     <Routes> y <Route>
     Enrutador. Lo que decide qué página mostrar según la URL.  
-*/
-
-
-
-
-
-/* template por defecto que viene con vite
-
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
 */

@@ -1,3 +1,8 @@
+/**
+ * Componente principal de App.jsx
+ */
+
+import './Hero.css';
 
 function Hero({children, heroClass}) {
   return (

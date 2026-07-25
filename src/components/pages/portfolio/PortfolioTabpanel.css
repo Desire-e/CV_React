@@ -1,0 +1,112 @@
+
+/* ===================== 
+   PortfolioTabpanel.jsx
+===================== */
+
+section.tabpanel .carousel-cards {
+  max-width:70%; 
+  margin:3rem auto; 
+  display:flex;
+  justify-content: center; 
+  gap:2rem;
+}
+
+@media(max-width:1024px){
+  section.tabpanel .carousel-cards {
+    max-width: 75% !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* override bootstrap */
+
+.carousel-inner {
+  position: relative;
+  height:75vh;
+}
+.carousel-item-next,
+.carousel-item-prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@media(max-width:1024px){
+  .carousel-inner {
+    height:80vh;
+  }
+}
+@media(max-width:768px){
+  .carousel-inner {
+    height:75vh;
+  }
+}
+
+.card {
+  color: #fff;
+  background: #1210131e;
+  
+  border: 1px solid #ffffff28;
+
+  padding: 0.5rem;
+  backdrop-filter: brightness(0.6);
+  
+  max-width: 50%;
+}
+
+.card .card-body .head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .card-body .head .category {
+  background-color: #502684;
+  color:#ffffffda;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.card .card-body .content{
+  display:flex;
+  flex-direction: column;
+  gap:0.5rem;
+}
+
+.card .card-body .content .card-text, 
+.card .card-body .content .tags {
+  color:#ffffffc5;
+  margin-bottom: 0;
+}
+
+.card .card-body .content .tags {
+  font-size:0.85rem;
+}
+
+.card .card-body .content .card-link {
+  color:var(--accent-color);
+  text-decoration: none;
+}
+.card-link span {
+  margin-right: 0.3rem;
+}
+
+
+@media(max-width:768px){
+  .card .card-body .head .category {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .card .card-body .content .tags {
+    font-size:0.75rem;
+  }
+}
+@media(max-width:426px){
+  .card{
+    max-width: 95%;
+  }
+}

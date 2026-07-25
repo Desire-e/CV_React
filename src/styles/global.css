@@ -1,18 +1,11 @@
-/* CSS componentes base usados en App.jsx */
-@import "./base.css";
-
-/* CSS componentes reusables */
-@import "./reusables.css";
-
-/* CSS de los /pages */
-@import "./pages.css";
-
 /* CSS de mis propios componentes usados dentro de cada /page */
 @import "./components.css";
 
 
 
-/* Reset */
+/* ===================== 
+   Reset.
+===================== */
 
 *, 
 *::before, 
@@ -32,27 +25,6 @@ body {
 
 body:not(:has(.container-page.landing)) {
     background:
-    /* radial-gradient(
-        circle at 100% 45%,
-        rgba(255,115,35,0.35) 10%,
-        rgba(255,115,35,0.18) 40%,
-        rgba(255,115,35,0.08) 60%,
-        transparent 70%
-    ),
-
-    radial-gradient(
-        circle at 65% 50%,
-        rgba(90,55,140,.28) 0%,
-        rgba(70,40,110,.18) 35%,
-        transparent 65%
-    ),
-
-    linear-gradient(
-        90deg,
-        #0C1236 0%,
-        #0d1436 45%,
-        #1a1735 100%
-    ); */
     /* brillo naranja  */
     radial-gradient(
         circle at 100% 30%,
@@ -80,10 +52,9 @@ body:not(:has(.container-page.landing)) {
 }
 
 /* Desactivar scroll cuando un modal esté activo */
-
-body.modal-active {
+/* body.modal-active {
   overflow: hidden;
-}
+} */
 
 
 ul {
@@ -100,11 +71,9 @@ hr{
   height: 2px;
 }
 
-
-
-
-
-/* Variables globales */
+/* ===================== 
+   Variables globales.
+===================== */
 
 :root {
   /* modo claro */
@@ -142,3 +111,46 @@ hr{
   --dark-accent-color:#FB923C;
   --dark-border-color:#1E293B;
 }
+
+/* ===================== 
+   Overrides bootstrap.
+===================== */
+
+.btn {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.6rem;
+  --bs-border-width: 1.5px;
+}
+
+.btn-lg, .btn-md, .btn-sm{
+  --bs-btn-color: white;
+  --bs-btn-border-color: var(--accent-color-2);
+  
+  --bs-btn-hover-bg: var(--accent-color-2);
+  --bs-btn-hover-border-color: var(--accent-color-2);
+  
+  --bs-btn-active-bg: var(--accent-color-2);
+  --bs-btn-active-border-color: var(--accent-color-2);
+}
+.btn-lg {
+  --bs-btn-font-size: 1.1rem;
+
+  --bs-btn-padding-x: 2.4rem;
+  --bs-btn-padding-y: 1rem;
+}
+
+
+.btn-primary {
+    --bs-btn-bg: var(--txt-secondary-color);
+    --bs-btn-border-color: var(--txt-secondary-color);
+    --bs-btn-hover-bg: var(--border-color);
+    --bs-btn-hover-border-color: var(--border-color);
+    --bs-btn-active-bg: var(--border-color);
+    --bs-btn-active-border-color: var(--border-color);
+    --bs-btn-disabled-bg: var(--txt-secondary-color);
+    --bs-btn-disabled-border-color: var(--txt-secondary-color);
+
+    max-width: min-content;
+    width: min(200px, 100%);
+}
+

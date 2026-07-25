@@ -1,4 +1,5 @@
-// import foto from '../../public/images/foto.jpeg';
+import './About.css';
+
 import Button from 'react-bootstrap/Button';
 
 function About () {

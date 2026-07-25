@@ -1,0 +1,59 @@
+
+/* ================
+   About.jsx 
+================ */
+
+.contenido.about-me{
+  display:grid;
+  grid-template-columns:1fr 270px;
+  /* grid-template-areas es una forma de poner nombres 
+  a las zonas del grid para que el CSS sea mucho más legible. */
+  grid-template-areas: "title image" "text image";
+
+  gap:3rem;
+  align-items:start;
+}
+
+.contenido.about-me h2{
+  /* nombre de su zona grid */
+  grid-area: title;
+  margin: 0;
+}
+
+.letter{
+  grid-area: text;
+  /* flex: 1 0 40vw; */
+}
+.letter p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.contenido.about-me .image {
+  /* max-width: 270px; */
+  /* float: right; */
+  
+  /* nombre de su zona grid */
+  grid-area: image;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width:426px){
+  .contenido.about-me{
+    grid-template-columns:1fr;
+    grid-template-areas: "title" "image" "text";
+    
+    gap:2rem;
+  }
+
+  .image {
+    justify-self:center;
+  }
+  .image img{
+    max-width: 70vw;
+  }
+
+}

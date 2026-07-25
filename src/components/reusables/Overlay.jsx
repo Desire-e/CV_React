@@ -1,5 +1,11 @@
-import { useEffect } from "react";
+/**
+ * Componente reutilizable
+ * Para modales, menus...
+ */
 
+import './Overlay.css';
+
+import { useEffect } from "react";
 
 function Overlay({isActive, closeChildren, children}) {
 

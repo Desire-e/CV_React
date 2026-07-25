@@ -1,0 +1,52 @@
+
+/* ===================== 
+   Animación de partículas 
+   en LandingIntro
+===================== */
+
+.dust {
+  position: absolute;
+  /* abreviatura para definir las posiciones top, right, bottom y left */
+  inset: 0;
+  width: 65%;
+  justify-self: end;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--accent-color-2);
+  filter: blur(1px);
+  box-shadow:
+    0 0 4px rgb(199, 101, 26, 0.8),
+    0 0 10px rgb(199, 101, 26, 0.4);
+
+  animation: float infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0,0) scale(.8);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(20px,-40px) scale(1);
+  }
+
+  80% {
+    opacity: .6;
+  }
+
+  100% {
+    transform: translate(-15px,-80px) scale(.7);
+    opacity: 0;
+  }
+}

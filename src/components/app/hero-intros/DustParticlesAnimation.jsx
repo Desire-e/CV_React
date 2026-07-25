@@ -1,3 +1,9 @@
+/**
+ * Componente de animación en LandingIntro
+ */
+
+import './DustParticlesAnimation.css';
+
 import { useMemo } from "react";
 /*
 useMemo es un Hook de React para guardar en caché el 

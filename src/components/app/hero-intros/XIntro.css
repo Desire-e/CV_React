@@ -1,0 +1,131 @@
+
+/* ===================== 
+   XIntro.jsx 
+   Intro de cada página
+===================== */
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  color: white;
+  
+  margin: 0 10rem;  
+  width: auto;
+  height: 100%;
+
+  justify-content: center;  
+  margin-top:0;
+}
+
+.intro-container .content h1 { 
+  font-size: 3.5rem;   
+}
+
+@media(max-width:768px){
+  .intro-container {
+    margin: 0 5rem;
+  }
+  .intro-container .content h1 { font-size: 2.5rem; }
+}
+
+@media(max-width:426px){
+  .intro-container {
+    margin: 0 !important;
+  }
+}
+
+.intro-container .content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+
+  max-width: 32vw;
+}
+
+@media(max-width:768px){
+  .intro-container:not(:has(.landing)) .content {
+    max-width: 50vw;
+  }  
+}
+
+@media(max-width:426px){
+  .intro-container:not(:has(.landing)) .content {
+    max-width: 70vw;
+  }  
+}
+
+.intro-container .content .pretitle {
+  font-size: 1.5rem;
+}
+
+.intro-container .content .description {
+  margin: 1rem 0;
+}
+
+
+/* Variante LandingIntro */
+
+.intro-container.landing {
+  justify-content: space-around;
+  margin-top: 4rem;
+}
+.intro-container.landing .content {
+  align-self: auto;
+  text-align: left;
+  max-width: 100%;
+}
+.intro-container.landing .content p#greetings { 
+  font-size: 1.4rem; 
+  margin: 0;
+}
+
+.intro-container.landing .content p#role { font-size: 2rem; }
+
+@media(max-width:768px){
+  .intro-container.landing .content p#greetings { font-size: 1.2rem; }
+  .intro-container.landing .content p#role { font-size: 1.7rem; }
+}
+
+
+.intro-container.landing .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+@media(max-width:426px){
+  .intro-container.landing .buttons {
+    margin:1.5rem 0;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .intro-container.landing .buttons a, 
+  .intro-container.landing .buttons button {
+    padding: 0.7rem 1.5rem; 
+    width: 100%;
+  }
+}
+
+/* variante de btn-cta en LandingIntro.jsx */
+
+.landing.intro-container .btn-cta#my-projects-btn i { margin-left: 0.6rem; }
+
+@media(max-width:768px){
+  .intro-container.landing .btn-cta#my-projects-btn i { margin-left: 0.3rem; }
+}
+
+.intro-container.landing .btn-cta#my-projects-btn i {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+.intro-container.landing .btn-cta#my-projects-btn:hover i {
+  transform: translateX(40%);  
+}

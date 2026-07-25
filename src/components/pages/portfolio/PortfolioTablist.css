@@ -1,0 +1,58 @@
+/* ===================== 
+   PortfolioTablist.jsx
+===================== */
+
+nav.tablist {
+  display:flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  padding:1.5rem;
+
+  background-color: transparent;
+  backdrop-filter: brightness(1) blur(100px) contrast(1.1) opacity(0.8);  
+
+  border: transparent;
+  border-radius: 15px;
+}
+@media(max-width:426px){
+  nav.tablist {
+    gap: 0.5rem;
+    padding: 1.2rem;
+  }
+
+}
+
+nav.tablist button {
+  padding: 0.8rem 1.3rem;
+  font-weight: 500;
+
+  border: 0.5px solid #ffffff0e;
+  border-radius: 30px;
+
+  background-color: #0000001a;
+  color: var(--txt-primary-color);
+
+  position: relative;
+  z-index: 1;
+}
+
+nav.tablist button.selected {
+  background-color: var(--accent-color-2);
+}
+
+nav.tablist button.selected::before {
+  content: "";
+  position: absolute;
+  inset: -20px; /* el resplandor se extiende más allá del botón */
+  z-index: -1;
+  border-radius: 5px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 115, 35, 0.6) 0%,
+    rgba(255, 115, 35, 0.25) 40%,
+    transparent 70%
+  );
+
+  filter: blur(12px);
+}

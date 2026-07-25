@@ -1,0 +1,35 @@
+
+/* ================
+   Overlay.jsx 
+================ */
+
+.overlay {
+  position: fixed; /* no se mueve al hacer scroll, permanece en misma posición. */
+  inset: 0;   /* top:0 right:0 bottom:0 left:0 */
+  
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* hace que no pueda recibir clicks */
+  
+  /* transition: propiedad duración función-retardo retraso; */
+  transition: 
+    opacity 0.3s ease, /* al abrir, visibility pasa a visible inmediatamente y opacity se anima */
+    visibility 0s linear 0.3s;
+  
+    z-index: 50;
+}
+
+.overlay.active {
+  transition: opacity 0.3s ease;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+/* Desactivar scroll cuando un modal esté activo */
+body.modal-active {
+  overflow: hidden;
+}

@@ -1,5 +1,13 @@
+/**
+ * Componente principal de App.jsx
+ */
+
+import './Footer.css';
+
+
 function Footer() {
     return (
+        // TODO. JSON
         <footer>
             <div className="footer-top">
                 

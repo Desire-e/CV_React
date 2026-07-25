@@ -1,0 +1,30 @@
+
+/* ===================== 
+   NavTab.jsx
+===================== */
+
+@media(max-width:768px){
+  .navtab-container, .navtab-container *  { display: none; }
+}
+
+/* overrides bootstrap */
+
+.nav {
+  --bs-nav-underline-link-active-color:var(--accent-color);
+  --bs-nav-link-color: white;
+  --bs-nav-link-hover-color: var(--accent-color);
+  
+  --bs-nav-link-font-size: 1rem;
+  --bs-nav-link-padding-y: 0.7rem;
+}
+
+.nav-underline .nav-link.active, 
+.nav-underline .show > .nav-link {
+  font-weight: normal;
+}
+
+.nav-underline { --bs-nav-underline-gap: 3.5rem; }
+
+@media (max-width: 768px) {
+  .nav-underline { --bs-nav-underline-gap: 1.5rem !important; }
+}

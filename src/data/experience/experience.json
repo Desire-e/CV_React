@@ -1,0 +1,37 @@
+[
+    { 
+        "interval": "2023 - 2027", 
+        "title":"Formación Profesional Grado Superior en DAW", 
+        "subtitle":"Lorem ipsum dolor sit amet", 
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+        "icon":"bi bi-mortarboard-fill"
+    },
+    { 
+        "interval": "20XX - 20XX", 
+        "title":"Lorem ipsum dolor sit amet", 
+        "subtitle":"Lorem ipsum dolor sit amet", 
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+        "icon":"bi bi-mortarboard-fill"
+    },
+    { 
+        "interval": "20XX - 20XX", 
+        "title":"Lorem ipsum dolor sit amet", 
+        "subtitle":"Lorem ipsum dolor sit amet", 
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+        "icon":"bi bi-mortarboard-fill"
+    },
+    { 
+        "interval": "20XX - 20XX", 
+        "title":"Lorem ipsum dolor sit amet", 
+        "subtitle":"Lorem ipsum dolor sit amet", 
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+        "icon":"bi bi-mortarboard-fill"
+    },
+    { 
+        "interval": "20XX - 20XX", 
+        "title":"Lorem ipsum dolor sit amet", 
+        "subtitle":"Lorem ipsum dolor sit amet", 
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua", 
+        "icon":"bi bi-mortarboard-fill"
+    }
+]
