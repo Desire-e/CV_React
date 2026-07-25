@@ -1,0 +1,175 @@
+
+/* ================
+   Timeline.jsx 
+================ */
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  gap:2.5rem;
+}
+
+.timeline-item{
+  display:grid;
+  grid-template-columns: 8% 1fr;
+  position: relative; /* necesario para el pseudo-elemento */
+  gap:3rem;
+}
+
+@media(max-width:426px){
+.timeline-item {
+    gap:0.5rem;
+    grid-template-columns: 20% 1fr;
+
+  }
+  .timeline-item:not(:last-child)::before {
+    top: 25px !important;              /* mitad de los 50px del icono, arranca en su centro */
+    left: 10% !important;            /* mitad del 20% de la columna del icono */
+  }
+}
+
+/* Línea conectora entre icons */
+.timeline-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 37.5px;              /* mitad de los 75px del icono, arranca en su centro */
+  left: 4%;                 /* mitad del 8% de la columna del icono */
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% + 2.5rem); /* llega hasta el centro del siguiente icono */
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 0; /* por detrás del icono (que tiene z-index:1) */
+}
+
+.timeline-subject-icon{
+  display:flex;
+  /* gap:20px; */
+  height: fit-content;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.timeline-subject-icon .icon {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-shrink:0; /* no crece ante espacio sobrante */
+
+  position: relative;
+  z-index: 1;
+
+  width:75px;
+  height:75px;
+  aspect-ratio: 1/1;
+  font-size: 1.8rem;
+
+  border-radius:50%;
+  border:2px solid var(--icon-color);
+  
+  background: var(--bg-color);
+  color:var(--icon-color);
+}
+@media(max-width:426px){
+  .timeline-subject-icon .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+.timeline-item:nth-child(5) .timeline-subject-icon .icon {
+  --icon-color:#3d439b;
+  --glow-icon-color:#4851cd;
+}
+.timeline-item:nth-child(4) .timeline-subject-icon .icon{
+  --icon-color:#4b3f7b;
+  --glow-icon-color:#6a57b7;
+}
+.timeline-item:nth-child(3) .timeline-subject-icon .icon{
+  --icon-color: #6e4a64;
+  --glow-icon-color: #8e547d;
+}
+.timeline-item:nth-child(2) .timeline-subject-icon .icon{
+  --icon-color: #784b42; 
+  --glow-icon-color: #955c50; 
+}
+.timeline-item:nth-child(1) .timeline-subject-icon .icon{
+  --icon-color: #a0572e;
+  --glow-icon-color: #e47b3f;
+}
+
+.timeline-subject-icon .icon::before{
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 50%;
+  filter: blur(10px);
+  z-index: -1;
+  opacity: 0.8;
+  
+  background: radial-gradient(
+      circle,
+      color-mix(in srgb, var(--glow-icon-color) 35%, transparent) 0%,
+      color-mix(in srgb, var(--glow-icon-color) 15%, transparent) 45%,
+      transparent 75%
+  );
+
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100%{
+      opacity: 0.4;
+  }
+
+  50%{
+      opacity: 1;
+  }
+}
+
+.timeline-content {
+  display:flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timeline-item:not(:last-of-type) .timeline-content {
+  border-bottom: #d5aca034 2px solid;
+  padding-bottom: 2rem;
+}
+
+.timeline-content-head {
+  display: flex;
+  flex-direction: column;
+  gap:0.2rem;
+}
+
+.timeline-content-head h2 { 
+  font-size: 1.5rem !important;
+  /* reset */
+  margin: initial !important;
+  padding: initial !important;
+  position: initial !important;
+  width: initial !important;
+}
+.timeline-content-head h2::after {
+  /* reset */
+  position: initial !important;
+  width: initial !important;
+  height: initial !important;
+  background-color: initial !important;
+}
+.timeline-content-head h3 { 
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.timeline-content-head .pretitle { 
+  font-weight: 500;
+}
+
+.timeline-content-description{
+  color: #ffffffbe
+}
