@@ -40,12 +40,6 @@ Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
 ## Despliegue
  
 Este proyecto se despliega en **GitHub Pages** usando el paquete [`gh-pages`](https://www.npmjs.com/package/gh-pages).
-Para publicar los últimos cambios:
- 
-```bash
-npm run deploy
-```
-
 
 ## Licencia
  
